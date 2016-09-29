@@ -42,148 +42,9 @@ hNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNh
     <title>Leonardo Galante</title>
     <link rel="icon" type="image/png" href="favicon32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon16.png" sizes="16x16">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:700%7CRoboto:300,400%7CSource+Code+Pro:300">
-    <style>
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #ffd43b;
-            padding: 15px 20px;
-            overflow: auto;
-            color: #212121;
-        }
-        
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        header {
-            margin-bottom: 600px;
-            margin-top: 15%;
-        }
-        
-        header h1,
-        section h3 {
-            font-family: 'Raleway', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 6px;
-            font-size: 28px;
-        }
-        
-        header h2 {
-            font-family: 'Source Code Pro', monospace;
-            margin-bottom: 22px;
-            font-size: 18px;
-        }
-        
-        .col-4 {
-            width: 33.3%;
-            float: left;
-        }
-        
-        .col-6 {
-            width: 50%;
-            float: left;
-        }
-        
-        .col-8 {
-            width: 66.7%;
-            float: left;
-        }
-        
-        .col-12 {
-            width: 100%;
-        }
-        
-        .text-left {
-            text-align: left;
-        }
-        
-        .text-right {
-            text-align: right;
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        p {
-            font-weight: 300;
-            margin: 10px 0;
-        }
-        
-        a {
-            text-decoration: none;
-            color: #212121;
-        }
-        
-        a:hover {
-            color: #FF5722;
-        }
-        
-        .polygon {
-            -webkit-animation: pulse 5s infinite;
-            animation: pulse 5s infinite;
-            width: 55%;
-        }
-        
-        @keyframes pulse {
-            0% {
-                -webkit-transform: scale(1);
-                -ms-transform: scale(1);
-                transform: scale(1);
-            }
-            50% {
-                -webkit-transform: scale(1.1);
-                -ms-transform: scale(1.1);
-                transform: scale(1.1);
-            }
-            100% {
-                -webkit-transform: scale(1);
-                -ms-transform: scale(1);
-                transform: scale(1);
-            }
-        }
-        /* Portfolio */
-        
-        h4,
-        h5,
-        h6 {
-            font-weight: 100;
-        }
-        
-        .img-responsive {
-            max-width: 100%;
-            display: block;
-            height: auto;
-        }
-        
-        .margin-20 {
-            margin: 20px 0;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 20px;
-            }
-            h2 {
-                font-size: 16px;
-            }
-            .polygon {
-                width: 80%;
-            }
-            p {
-                font-size: 14px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:700%7CRoboto:300,400">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -191,7 +52,7 @@ hNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNh
         <div class="container">
             <div class="col-12 text-center">
                 <h1>Leonardo Galante</h1>
-                <h2>developer()</h2>
+                <h2>developer & designer</h2>
             </div>
             <div class="col-4 text-left">
                 <p><a href="https://leonardogl.wordpress.com" target="_blank">Blog</a></p>
@@ -220,9 +81,11 @@ hNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNh
                 </p>
             </div>
             <div class="col-12 text-left margin-20">
-                <img src="img/freecodecampba.png" alt="Local Weather" class="img-responsive">
+                <a href="http://freecodecampba.org/" target="_blank">
+                    <img src="img/freecodecampba.png" alt="Local Weather" class="img-responsive">
+                </a>
                 <p>
-                    <h4><a href="#" target="_blank">FreeCodeCampBA</a></h4>
+                    <h4>FreeCodeCampBA</h4>
                 </p>
                 <p>
                     <h5>This is the website for the FreeCodeCamp Buenos Aires community</h5>
@@ -232,21 +95,25 @@ hNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNh
                 </p>
             </div>
             <div class="col-12 text-right margin-20">
-                <img src="img/weather.png" alt="Local Weather" class="img-responsive">
+                <a href="#" target="_blank">
+                    <img src="img/weather.png" alt="Local Weather" class="img-responsive">
+                </a>
                 <p>
-                    <h4><a href="#" target="_blank">Local Weather</a></h4>
+                    <h4>Local Weather</h4>
                 </p>
                 <p>
                     <h5>This app will show you the temperature and a brief description of the weather</h5>
                 </p>
                 <p>
-                    <h6>I used <a href="https://erikflowers.github.io/weather-icons/" target="_blank">Weather Icons</a> to show each of these accordingly the climate and the <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap API</a> to get the weather data</h6>
+                    <h6>I used <a href="https://erikflowers.github.io/weather-icons/" target="_blank">Weather Icons</a> to show each of these accordingly the climate and the <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap API</a> to get the weather</h6>
                 </p>
             </div>
             <div class="col-12 text-left margin-20">
-                <img src="img/quote.png" alt="Quote Machine" class="img-responsive">
+                <a href="#" target="_blank">
+                    <img src="img/quote.png" alt="Quote Machine" class="img-responsive">
+                </a>
                 <p>
-                    <h4><a href="#" target="_blank">Quote Machine</a></h4>
+                    <h4>Quote Machine</h4>
                 </p>
                 <p>
                     <h5>This app will show you randomly a beautiful quote to cheer up your day</h5>
@@ -256,9 +123,11 @@ hNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNh
                 </p>
             </div>
             <div class="col-12 text-right margin-20">
-                <img src="img/wikipedia.png" alt="WikiPedia Viewer" class="img-responsive">
+                <a href="#" target="_blank">
+                    <img src="img/wikipedia.png" alt="WikiPedia Viewer" class="img-responsive">
+                </a>
                 <p>
-                    <h4><a href="#" target="_blank">WikiPedia Viewer</a></h4>
+                    <h4>WikiPedia Viewer</h4>
                 </p>
                 <p>
                     <h5>This app will allow you to search for any article on the WikiPedia</h5>
@@ -268,9 +137,11 @@ hNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNh
                 </p>
             </div>
             <div class="col-12 text-left margin-20">
-                <img src="img/pomodoro.png" alt="Pomodoro Clock" class="img-responsive">
+                <a href="#" target="_blank">
+                    <img src="img/pomodoro.png" alt="Pomodoro Clock" class="img-responsive">
+                </a>
                 <p>
-                    <h4><a href="#" target="_blank">Pomodoro Clock</a></h4>
+                    <h4>Pomodoro Clock</h4>
                 </p>
                 <p>
                     <h5>This app will allow you to stop procastinating all day</h5>
@@ -280,15 +151,17 @@ hNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNh
                 </p>
             </div>
             <div class="col-12 text-right margin-20">
-                <img src="img/tictactoe.png" alt="Pomodoro Clock" class="img-responsive">
+                <a href="#" target="_blank">
+                    <img src="img/tictactoe.png" alt="Pomodoro Clock" class="img-responsive">
+                </a>
                 <p>
-                    <h4><a href="#" target="_blank">Tic Tac Toe</a></h4>
+                    <h4>Tic Tac Toe</h4>
                 </p>
                 <p>
                     <h5>This game will allow you to play tic tac toe against the computer</h5>
                 </p>
                 <p>
-                    <h6>I used <a href="http://jquerymodal.com/" target="_blank">jQuery Modal</a> to show modals whenever you win or lose</h6>
+                    <h6>I used <a href="http://jquerymodal.com/" target="_blank">jQuery Modal</a> to show modals whenever you win or lose. It's not made with AI but it will be</h6>
                 </p>
             </div>
         </div>
