@@ -8,8 +8,15 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #ffd43b;
     padding: 15px 20px;
-    overflow: auto;
     color: #212121;
+    overflow: auto;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 100;
 }
 
 .container {
@@ -18,21 +25,21 @@ body {
 }
 
 header {
-    margin-bottom: 600px;
+    margin-bottom: 800px;
     margin-top: 15%;
 }
 
 header h1,
-section h3 {
+section h2 {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 0;
+    font-size: 2em;
 }
 
 header h2 {
-    margin: 6px 0 22px 0;
-    font-weight: 300;
+    margin: 6px 0 30px 0;
     font-size: 18px;
 }
 
@@ -105,15 +112,6 @@ a:hover {
     }
 }
 
-
-/* Portfolio */
-
-h4,
-h5,
-h6 {
-    font-weight: 100;
-}
-
 .img-responsive {
     max-width: 100%;
     display: block;
@@ -124,15 +122,10 @@ h6 {
     margin: 20px 0;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 20px;
-    }
-    h2 {
-        font-size: 16px;
-    }
-    p {
-        font-size: 14px;
+@media (max-width: 600px) {
+    header h1,
+    section h2 {
+        font-size: 1.6em;
     }
     .polygon {
         width: 80%;

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Fenwil/personal-site#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
     "gulp-htmlmin": "^2.0.0",
     "gulp-rename": "^1.2.2"
   }
