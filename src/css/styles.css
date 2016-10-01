@@ -99,6 +99,11 @@ p {
     margin: 16px 0;
 }
 
+#portfolio {
+    padding-top: 20px;
+    margin-top: -20px;
+}
+
 .polygon {
     -webkit-animation: pulse 5s infinite;
     animation: pulse 5s infinite;
