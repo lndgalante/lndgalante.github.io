@@ -82,7 +82,7 @@ a:hover {
 .polygon {
     -webkit-animation: pulse 5s infinite;
     animation: pulse 5s infinite;
-    width: 55%;
+    width: 50%;
 }
 
 @keyframes pulse {
@@ -120,8 +120,5 @@ a:hover {
     }
     header p {
         font-size: 14px;
-    }
-    .polygon {
-        width: 80%;
     }
 }
