@@ -5,8 +5,8 @@
 }
 
 html {
-    -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -99,15 +99,25 @@ p {
     margin: 16px 0;
 }
 
+.arrow {
+    position: absolute;
+    margin: 30px auto;
+    height: 30px;
+    width: 30px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
 #portfolio {
-    padding-top: 20px;
-    margin-top: -20px;
+    padding-top: 30px;
+    margin-top: -30px;
 }
 
 .polygon {
     -webkit-animation: pulse 5s infinite;
     animation: pulse 5s infinite;
-    width: 50%;
+    width: 46%;
 }
 
 @keyframes pulse {
