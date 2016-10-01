@@ -16,7 +16,7 @@ body {
     background-color: #ffd43b;
     font: 16px/1 sans-serif;
     color: #212121;
-    padding: 0 15px;
+    padding: 30px 15px;
     overflow: auto;
 }
 
@@ -50,7 +50,6 @@ img {
 }
 
 header {
-    padding-top: 12%;
     height: 100vh;
 }
 
@@ -100,18 +99,13 @@ p {
 }
 
 .arrow {
-    position: absolute;
-    margin: 30px auto;
-    height: 30px;
-    width: 30px;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    margin-top: 40px;
+    height: 40px;
+    width: 40px;
 }
 
-#portfolio {
-    padding-top: 30px;
-    margin-top: -30px;
+section {
+    padding-top: 10px;
 }
 
 .polygon {
