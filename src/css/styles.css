@@ -50,8 +50,8 @@ img {
 }
 
 header {
-    margin-bottom: 800px;
-    margin-top: 10%;
+    padding-top: 12%;
+    height: 100vh;
 }
 
 header h1,
