@@ -52,6 +52,12 @@ header {
     height: 100vh;
 }
 
+header .container {
+    transform: translateY(-45%);
+    position: relative;
+    top: 45%;
+}
+
 header h1,
 section h2 {
     font-family: 'Raleway', sans-serif;
