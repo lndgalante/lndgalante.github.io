@@ -132,6 +132,6 @@
 }));
 
 smoothScroll.init({
-    speed: 1300,
+    speed: 1500,
     easing: 'easeInOutQuad'
 })
