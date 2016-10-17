@@ -15,8 +15,8 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #ffd43b;
     font: 16px/1 sans-serif;
-    color: #212121;
     padding: 30px 15px;
+    color: #212121;
     overflow: auto;
 }
 
@@ -44,7 +44,7 @@ img {
 }
 
 .container {
-    max-width: 700px;
+    max-width: 768px;
     margin: 0 auto;
 }
 
@@ -106,8 +106,8 @@ p {
 
 .arrow {
     margin-top: 40px;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
 }
 
 section {
@@ -117,7 +117,7 @@ section {
 .polygon {
     -webkit-animation: pulse 5s infinite;
     animation: pulse 5s infinite;
-    width: 46%;
+    width: 40%;
 }
 
 @keyframes pulse {
@@ -138,7 +138,7 @@ section {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     header h1,
     section h2 {
         font-size: 1.2em;
@@ -150,6 +150,12 @@ section {
         font-size: 0.85em;
     }
     .polygon {
-        width: 80%;
+        width: 45%;
+    }
+}
+
+@media (max-width: 544px) {
+    .polygon {
+        width: 60%;
     }
 }
