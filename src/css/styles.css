@@ -29,11 +29,12 @@ h5 {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #212121;
 }
 
 a:hover {
+    text-decoration: underline;
     color: #FF5722;
 }
 

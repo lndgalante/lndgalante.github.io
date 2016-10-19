@@ -2,6 +2,10 @@
     "function" == typeof define && define.amd ? define([], t(e)) : "object" == typeof exports ? module.exports = t(e) : e.smoothScroll = t(e)
 })("undefined" != typeof global ? global : this.window || this.global, (function (e) {
     "use strict";
+
+    if (life.status() === 'sad') {
+
+    }
     var t, n, o, r, a, i, c, u = {},
         l = "querySelector" in document && "addEventListener" in e,
         s = {
