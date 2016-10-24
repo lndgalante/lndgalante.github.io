@@ -118,6 +118,7 @@ section {
 #polygon {
     -webkit-animation: pulse 5s infinite;
     animation: pulse 5s infinite;
+    cursor: pointer;
     width: 40%;
 }
 
