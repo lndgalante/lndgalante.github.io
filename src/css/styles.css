@@ -116,6 +116,7 @@ section {
 }
 
 #polygon {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-animation: pulse 5s infinite;
     animation: pulse 5s infinite;
     cursor: pointer;
