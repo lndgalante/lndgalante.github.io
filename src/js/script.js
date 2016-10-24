@@ -609,7 +609,7 @@ var polygon = document.getElementById("polygon");
 var arrow = document.getElementById("arrow");
 var anchors = document.getElementsByTagName("a");
 
-polygon.onmouseover = function () {
+polygon.onclick = function () {
     document.body.style.color = "#ffd43b"
     for (var i = 0; i < anchors.length; i++) {
         anchors[i].style.color = "#ffd43b"
@@ -619,7 +619,7 @@ polygon.onmouseover = function () {
     arrow.src = "./dist/img/arrow-inverse.svg"
 }
 
-polygon.onmouseout = function () {
+polygon.ondblclick = function () {
     document.body.style.color = "#212121"
     for (var i = 0; i < anchors.length; i++) {
         anchors[i].style.color = "#212121"
@@ -628,10 +628,3 @@ polygon.onmouseout = function () {
     polygon.src = "./dist/img/polygon.svg"
     arrow.src = "./dist/img/arrow.svg"
 }
-
-
-
-// # polygon: hover {
-//     background - color: #212121;
-//     color: # ffd43b;
-// }
