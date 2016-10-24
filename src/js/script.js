@@ -604,3 +604,34 @@ smoothScroll.init({
     speed: 1500,
     easing: 'easeInOutQuad'
 })
+
+var polygon = document.getElementById("polygon");
+var arrow = document.getElementById("arrow");
+var anchors = document.getElementsByTagName("a");
+
+polygon.onmouseover = function () {
+    document.body.style.color = "#ffd43b"
+    for (var i = 0; i < anchors.length; i++) {
+        anchors[i].style.color = "#ffd43b"
+    }
+    document.body.style.backgroundColor = "#212121"
+    polygon.src = "./dist/img/polygon-inverse.svg"
+    arrow.src = "./dist/img/arrow-inverse.svg"
+}
+
+polygon.onmouseout = function () {
+    document.body.style.color = "#212121"
+    for (var i = 0; i < anchors.length; i++) {
+        anchors[i].style.color = "#212121"
+    }
+    document.body.style.backgroundColor = "#ffd43b"
+    polygon.src = "./dist/img/polygon.svg"
+    arrow.src = "./dist/img/arrow.svg"
+}
+
+
+
+// # polygon: hover {
+//     background - color: #212121;
+//     color: # ffd43b;
+// }

@@ -105,7 +105,7 @@ p {
     margin: 16px 0;
 }
 
-.arrow {
+#arrow {
     margin-top: 40px;
     height: 50px;
     width: 50px;
@@ -115,7 +115,7 @@ section {
     padding-top: 10px;
 }
 
-.polygon {
+#polygon {
     -webkit-animation: pulse 5s infinite;
     animation: pulse 5s infinite;
     width: 40%;
@@ -150,13 +150,13 @@ section {
     header p {
         font-size: 0.85em;
     }
-    .polygon {
+    #polygon {
         width: 45%;
     }
 }
 
 @media (max-width: 544px) {
-    .polygon {
+    #polygon {
         width: 60%;
     }
 }
