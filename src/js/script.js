@@ -605,8 +605,26 @@ smoothScroll.init({
     easing: 'easeInOutQuad'
 })
 
+
+function addClass(el, className) {
+    if (el.classList)
+        el.classList.add(className)
+    else if (!hasClass(el, className)) el.className += " " + className
+}
+
+function removeClass(el, className) {
+    if (el.classList)
+        el.classList.remove(className)
+    else if (hasClass(el, className)) {
+        var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+        el.className = el.className.replace(reg, ' ')
+    }
+}
+
 var polygon = document.getElementById("polygon");
 var arrow = document.getElementById("arrow");
+var polygonInverse = document.getElementById("polygonInverse");
+var arrowInverse = document.getElementById("arrowInverse");
 var anchors = document.getElementsByTagName("a");
 
 polygon.onclick = function () {
@@ -615,16 +633,20 @@ polygon.onclick = function () {
         anchors[i].style.color = "#ffd43b"
     }
     document.body.style.backgroundColor = "#212121"
-    polygon.src = "./dist/img/polygon-inverse.svg"
-    arrow.src = "./dist/img/arrow-inverse.svg"
+    addClass(polygon, "hidden")
+    addClass(arrow, "hidden")
+    removeClass(polygonInverse, "hidden")
+    removeClass(arrowInverse, "hidden")
 }
 
-polygon.ondblclick = function () {
+polygonInverse.ondblclick = function () {
     document.body.style.color = "#212121"
     for (var i = 0; i < anchors.length; i++) {
         anchors[i].style.color = "#212121"
     }
     document.body.style.backgroundColor = "#ffd43b"
-    polygon.src = "./dist/img/polygon.svg"
-    arrow.src = "./dist/img/arrow.svg"
+    addClass(polygonInverse, "hidden")
+    addClass(arrowInverse, "hidden")
+    removeClass(polygon, "hidden")
+    removeClass(arrow, "hidden")
 }
