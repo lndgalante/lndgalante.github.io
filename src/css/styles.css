@@ -105,15 +105,12 @@ p {
     margin: 16px 0;
 }
 
-#arrow,
-#arrowInverse {
-    margin-top: 40px;
-    height: 50px;
-    width: 50px;
-}
-
 section {
     padding-top: 10px;
+}
+
+.hidden {
+    display: none;
 }
 
 #polygon,
@@ -123,10 +120,6 @@ section {
     animation: pulse 5s infinite;
     cursor: pointer;
     width: 40%;
-}
-
-.hidden {
-    display: none;
 }
 
 @keyframes pulse {
@@ -145,6 +138,14 @@ section {
         -ms-transform: scale(1);
         transform: scale(1);
     }
+}
+
+#arrow,
+#arrowInverse {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    margin-top: 40px;
+    height: 50px;
+    width: 50px;
 }
 
 @media (max-width: 768px) {
