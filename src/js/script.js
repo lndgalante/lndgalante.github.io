@@ -6,7 +6,9 @@
     } else {
         root.smoothScroll = factory(root);
     }
-})(typeof global !== 'undefined' ? global : this.window || this.global, function (root) {
+})(typeof global !== 'undefined'
+    ? global
+    : this.window || this.global, function (root) {
 
     'use strict';
 
@@ -16,7 +18,13 @@
 
     var smoothScroll = {}; // Object for public APIs
     var supports = 'querySelector' in document && 'addEventListener' in root; // Feature test
-    var settings, anchor, toggle, fixedHeader, headerHeight, eventTimeout, animationInterval;
+    var settings,
+        anchor,
+        toggle,
+        fixedHeader,
+        headerHeight,
+        eventTimeout,
+        animationInterval;
 
     // Default settings
     var defaults = {
@@ -27,7 +35,6 @@
         offset: 0,
         callback: function () {}
     };
-
 
     //
     // Methods
@@ -100,7 +107,8 @@
         // Variables
         var firstChar = selector.charAt(0);
         var supports = 'classList' in document.documentElement;
-        var attribute, value;
+        var attribute,
+            value;
 
         // If selector is a data attribute, split attribute from value
         if (firstChar === '[') {
@@ -109,7 +117,9 @@
 
             if (attribute.length > 1) {
                 value = true;
-                attribute[1] = attribute[1].replace(/"/g, '').replace(/'/g, '');
+                attribute[1] = attribute[1]
+                    .replace(/"/g, '')
+                    .replace(/'/g, '');
             }
         }
 
@@ -182,49 +192,33 @@
         var firstCodeUnit = string.charCodeAt(0);
         while (++index < length) {
             codeUnit = string.charCodeAt(index);
-            // Note: there’s no need to special-case astral symbols, surrogate
-            // pairs, or lone surrogates.
-
-            // If the character is NULL (U+0000), then throw an
+            // Note: there’s no need to special-case astral symbols, surrogate pairs, or
+            // lone surrogates. If the character is NULL (U+0000), then throw an
             // `InvalidCharacterError` exception and terminate these steps.
             if (codeUnit === 0x0000) {
-                throw new InvalidCharacterError(
-                    'Invalid character: the input contains U+0000.'
-                );
+                throw new InvalidCharacterError('Invalid character: the input contains U+0000.');
             }
 
             if (
-                // If the character is in the range [\1-\1F] (U+0001 to U+001F) or is
-                // U+007F, […]
-                (codeUnit >= 0x0001 && codeUnit <= 0x001F) || codeUnit == 0x007F ||
-                // If the character is the first character and is in the range [0-9]
-                // (U+0030 to U+0039), […]
-                (index === 0 && codeUnit >= 0x0030 && codeUnit <= 0x0039) ||
-                // If the character is the second character and is in the range [0-9]
-                // (U+0030 to U+0039) and the first character is a `-` (U+002D), […]
-                (
-                    index === 1 &&
-                    codeUnit >= 0x0030 && codeUnit <= 0x0039 &&
-                    firstCodeUnit === 0x002D
-                )
-            ) {
+            // If the character is in the range [\1-\1F] (U+0001 to U+001F) or is U+007F,
+            // […]
+            (codeUnit >= 0x0001 && codeUnit <= 0x001F) || codeUnit == 0x007F ||
+            // If the character is the first character and is in the range [0-9] (U+0030 to
+            // U+0039), […]
+            (index === 0 && codeUnit >= 0x0030 && codeUnit <= 0x0039) ||
+            // If the character is the second character and is in the range [0-9] (U+0030 to
+            // U+0039) and the first character is a `-` (U+002D), […]
+            (index === 1 && codeUnit >= 0x0030 && codeUnit <= 0x0039 && firstCodeUnit === 0x002D)) {
                 // http://dev.w3.org/csswg/cssom/#escape-a-character-as-code-point
                 result += '\\' + codeUnit.toString(16) + ' ';
                 continue;
             }
 
-            // If the character is not handled by one of the above rules and is
-            // greater than or equal to U+0080, is `-` (U+002D) or `_` (U+005F), or
-            // is in one of the ranges [0-9] (U+0030 to U+0039), [A-Z] (U+0041 to
-            // U+005A), or [a-z] (U+0061 to U+007A), […]
-            if (
-                codeUnit >= 0x0080 ||
-                codeUnit === 0x002D ||
-                codeUnit === 0x005F ||
-                codeUnit >= 0x0030 && codeUnit <= 0x0039 ||
-                codeUnit >= 0x0041 && codeUnit <= 0x005A ||
-                codeUnit >= 0x0061 && codeUnit <= 0x007A
-            ) {
+            // If the character is not handled by one of the above rules and is greater than
+            // or equal to U+0080, is `-` (U+002D) or `_` (U+005F), or is in one of the
+            // ranges [0-9] (U+0030 to U+0039), [A-Z] (U+0041 to U+005A), or [a-z] (U+0061
+            // to U+007A), […]
+            if (codeUnit >= 0x0080 || codeUnit === 0x002D || codeUnit === 0x005F || codeUnit >= 0x0030 && codeUnit <= 0x0039 || codeUnit >= 0x0041 && codeUnit <= 0x005A || codeUnit >= 0x0061 && codeUnit <= 0x007A) {
                 // the character itself
                 result += string.charAt(index);
                 continue;
@@ -250,18 +244,38 @@
      */
     var easingPattern = function (type, time) {
         var pattern;
-        if (type === 'easeInQuad') pattern = time * time; // accelerating from zero velocity
-        if (type === 'easeOutQuad') pattern = time * (2 - time); // decelerating to zero velocity
-        if (type === 'easeInOutQuad') pattern = time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time; // acceleration until halfway, then deceleration
-        if (type === 'easeInCubic') pattern = time * time * time; // accelerating from zero velocity
-        if (type === 'easeOutCubic') pattern = (--time) * time * time + 1; // decelerating to zero velocity
-        if (type === 'easeInOutCubic') pattern = time < 0.5 ? 4 * time * time * time : (time - 1) * (2 * time - 2) * (2 * time - 2) + 1; // acceleration until halfway, then deceleration
-        if (type === 'easeInQuart') pattern = time * time * time * time; // accelerating from zero velocity
-        if (type === 'easeOutQuart') pattern = 1 - (--time) * time * time * time; // decelerating to zero velocity
-        if (type === 'easeInOutQuart') pattern = time < 0.5 ? 8 * time * time * time * time : 1 - 8 * (--time) * time * time * time; // acceleration until halfway, then deceleration
-        if (type === 'easeInQuint') pattern = time * time * time * time * time; // accelerating from zero velocity
-        if (type === 'easeOutQuint') pattern = 1 + (--time) * time * time * time * time; // decelerating to zero velocity
-        if (type === 'easeInOutQuint') pattern = time < 0.5 ? 16 * time * time * time * time * time : 1 + 16 * (--time) * time * time * time * time; // acceleration until halfway, then deceleration
+        if (type === 'easeInQuad') 
+            pattern = time * time; // accelerating from zero velocity
+        if (type === 'easeOutQuad') 
+            pattern = time * (2 - time); // decelerating to zero velocity
+        if (type === 'easeInOutQuad') 
+            pattern = time < 0.5
+                ? 2 * time * time
+                : -1 + (4 - 2 * time) * time; // acceleration until halfway, then deceleration
+        if (type === 'easeInCubic') 
+            pattern = time * time * time; // accelerating from zero velocity
+        if (type === 'easeOutCubic') 
+            pattern = (--time) * time * time + 1; // decelerating to zero velocity
+        if (type === 'easeInOutCubic') 
+            pattern = time < 0.5
+                ? 4 * time * time * time
+                : (time - 1) * (2 * time - 2) * (2 * time - 2) + 1; // acceleration until halfway, then deceleration
+        if (type === 'easeInQuart') 
+            pattern = time * time * time * time; // accelerating from zero velocity
+        if (type === 'easeOutQuart') 
+            pattern = 1 - (--time) * time * time * time; // decelerating to zero velocity
+        if (type === 'easeInOutQuart') 
+            pattern = time < 0.5
+                ? 8 * time * time * time * time
+                : 1 - 8 * (--time) * time * time * time; // acceleration until halfway, then deceleration
+        if (type === 'easeInQuint') 
+            pattern = time * time * time * time * time; // accelerating from zero velocity
+        if (type === 'easeOutQuint') 
+            pattern = 1 + (--time) * time * time * time * time; // decelerating to zero velocity
+        if (type === 'easeInOutQuint') 
+            pattern = time < 0.5
+                ? 16 * time * time * time * time * time
+                : 1 + 16 * (--time) * time * time * time * time; // acceleration until halfway, then deceleration
         return pattern || time; // no easing, no acceleration
     };
 
@@ -300,11 +314,7 @@
      * @returns {Number}
      */
     var getDocumentHeight = function () {
-        return Math.max(
-            document.body.scrollHeight, document.documentElement.scrollHeight,
-            document.body.offsetHeight, document.documentElement.offsetHeight,
-            document.body.clientHeight, document.documentElement.clientHeight
-        );
+        return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight);
     };
 
     /**
@@ -314,7 +324,9 @@
      * @returns {Object}
      */
     var getDataOptions = function (options) {
-        return !options || !(typeof JSON === 'object' && typeof JSON.parse === 'function') ? {} : JSON.parse(options);
+        return !options || !(typeof JSON === 'object' && typeof JSON.parse === 'function')
+            ? {}
+            : JSON.parse(options);
     };
 
     /**
@@ -324,7 +336,9 @@
      * @return {Number}        The height of the header
      */
     var getHeaderHeight = function (header) {
-        return !header ? 0 : (getHeight(header) + header.offsetTop);
+        return !header
+            ? 0
+            : (getHeight(header) + header.offsetTop);
     };
 
     /**
@@ -334,8 +348,9 @@
     var adjustFocus = function (anchor, endLocation, isNum) {
 
         // Don't run if scrolling to a number on the page
-        if (isNum) return;
-
+        if (isNum) 
+            return;
+        
         // Otherwise, bring anchor element into focus
         anchor.focus();
         if (document.activeElement.id !== anchor.id) {
@@ -357,13 +372,23 @@
     smoothScroll.animateScroll = function (anchor, toggle, options) {
 
         // Options and overrides
-        var overrides = getDataOptions(toggle ? toggle.getAttribute('data-options') : null);
+        var overrides = getDataOptions(toggle
+            ? toggle.getAttribute('data-options')
+            : null);
         var animateSettings = extend(settings || defaults, options || {}, overrides); // Merge user options with defaults
 
         // Selectors and variables
-        var isNum = Object.prototype.toString.call(anchor) === '[object Number]' ? true : false;
-        var anchorElem = isNum || !anchor.tagName ? null : anchor;
-        if (!isNum && !anchorElem) return;
+        var isNum = Object
+            .prototype
+            .toString
+            .call(anchor) === '[object Number]'
+            ? true
+            : false;
+        var anchorElem = isNum || !anchor.tagName
+            ? null
+            : anchor;
+        if (!isNum && !anchorElem) 
+            return;
         var startLocation = root.pageYOffset; // Current location on the page
         if (animateSettings.selectorHeader && !fixedHeader) {
             // Get the fixed header if not already set
@@ -373,11 +398,14 @@
             // Get the height of a fixed header if one exists and not already set
             headerHeight = getHeaderHeight(fixedHeader);
         }
-        var endLocation = isNum ? anchor : getEndLocation(anchorElem, headerHeight, parseInt(animateSettings.offset, 10)); // Location to scroll to
+        var endLocation = isNum
+            ? anchor
+            : getEndLocation(anchorElem, headerHeight, parseInt(animateSettings.offset, 10)); // Location to scroll to
         var distance = endLocation - startLocation; // distance to travel
         var documentHeight = getDocumentHeight();
         var timeLapsed = 0;
-        var percentage, position;
+        var percentage,
+            position;
 
         /**
          * Stop the scroll animation when it reaches its target (or the bottom/top of page)
@@ -409,7 +437,9 @@
         var loopAnimateScroll = function () {
             timeLapsed += 16;
             percentage = (timeLapsed / parseInt(animateSettings.speed, 10));
-            percentage = (percentage > 1) ? 1 : percentage;
+            percentage = (percentage > 1)
+                ? 1
+                : percentage;
             position = startLocation + (distance * easingPattern(animateSettings.easing, percentage));
             root.scrollTo(0, Math.floor(position));
             stopAnimateScroll(position, endLocation, animationInterval);
@@ -447,8 +477,9 @@
         var hash = root.location.hash;
 
         // Only run if there's an anchor element to scroll to
-        if (!anchor) return;
-
+        if (!anchor) 
+            return;
+        
         // Reset the anchor element's ID
         anchor.id = anchor.getAttribute('data-scroll-id');
 
@@ -468,15 +499,18 @@
     var clickHandler = function (event) {
 
         // Don't run if right-click or command/control + click
-        if (event.button !== 0 || event.metaKey || event.ctrlKey) return;
-
+        if (event.button !== 0 || event.metaKey || event.ctrlKey) 
+            return;
+        
         // Check if a smooth scroll link was clicked
         toggle = getClosest(event.target, settings.selector);
-        if (!toggle || toggle.tagName.toLowerCase() !== 'a') return;
-
+        if (!toggle || toggle.tagName.toLowerCase() !== 'a') 
+            return;
+        
         // Only run if link is an anchor and points to the current page
-        if (toggle.hostname !== root.location.hostname || toggle.pathname !== root.location.pathname || !/#/.test(toggle.href)) return;
-
+        if (toggle.hostname !== root.location.hostname || toggle.pathname !== root.location.pathname || !/#/.test(toggle.href)) 
+            return;
+        
         // Get the sanitized hash
         var hash = escapeCharacters(toggle.hash);
 
@@ -489,13 +523,15 @@
             // Set the anchored element
             anchor = document.body;
 
-            // Save or create the ID as a data attribute and remove it (prevents scroll jump)
-            var id = anchor.id ? anchor.id : 'smooth-scroll-top';
+            // Save or create the ID as a data attribute and remove it (prevents scroll
+            // jump)
+            var id = anchor.id
+                ? anchor.id
+                : 'smooth-scroll-top';
             anchor.setAttribute('data-scroll-id', id);
             anchor.id = '';
 
-            // If no hash change event will happen, fire manually
-            // Otherwise, update the hash
+            // If no hash change event will happen, fire manually Otherwise, update the hash
             if (root.location.hash.substring(1) === id) {
                 hashChangeHandler();
             } else {
@@ -509,8 +545,10 @@
         // Get the anchored element
         anchor = document.querySelector(hash);
 
-        // If anchored element exists, save the ID as a data attribute and remove it (prevents scroll jump)
-        if (!anchor) return;
+        // If anchored element exists, save the ID as a data attribute and remove it
+        // (prevents scroll jump)
+        if (!anchor) 
+            return;
         anchor.setAttribute('data-scroll-id', anchor.id);
         anchor.id = '';
 
@@ -544,8 +582,9 @@
     smoothScroll.destroy = function () {
 
         // If plugin isn't already initialized, stop
-        if (!settings) return;
-
+        if (!settings) 
+            return;
+        
         // Remove event listeners
         document.removeEventListener('click', clickHandler, false);
         root.removeEventListener('resize', resizeThrottler, false);
@@ -568,14 +607,17 @@
     smoothScroll.init = function (options) {
 
         // feature test
-        if (!supports) return;
-
+        if (!supports) 
+            return;
+        
         // Destroy any existing initializations
         smoothScroll.destroy();
 
         // Selectors and variables
         settings = extend(defaults, options || {}); // Merge user options with defaults
-        fixedHeader = settings.selectorHeader ? document.querySelector(settings.selectorHeader) : null; // Get the fixed header
+        fixedHeader = settings.selectorHeader
+            ? document.querySelector(settings.selectorHeader)
+            : null; // Get the fixed header
         headerHeight = getHeaderHeight(fixedHeader);
 
         // When a toggle is clicked, run the click handler
@@ -591,7 +633,6 @@
 
     };
 
-
     //
     // Public APIs
     //
@@ -600,24 +641,23 @@
 
 });
 
-smoothScroll.init({
-    speed: 1500,
-    easing: 'easeInOutQuad'
-})
-
+smoothScroll.init({speed: 1500, easing: 'easeInOutQuad'})
 
 function addClass(el, className) {
-    if (el.classList)
+    if (el.classList) 
         el.classList.add(className)
-    else if (!hasClass(el, className)) el.className += " " + className
+    else if (!hasClass(el, className)) 
+        el.className += " " + className
 }
 
 function removeClass(el, className) {
-    if (el.classList)
+    if (el.classList) 
         el.classList.remove(className)
     else if (hasClass(el, className)) {
         var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
-        el.className = el.className.replace(reg, ' ')
+        el.className = el
+            .className
+            .replace(reg, ' ')
     }
 }
 
@@ -639,7 +679,7 @@ polygon.onclick = function () {
     removeClass(arrowInverse, "hidden")
 }
 
-polygonInverse.ondblclick = function () {
+polygonInverse.onclick = function () {
     document.body.style.color = "#212121"
     for (var i = 0; i < anchors.length; i++) {
         anchors[i].style.color = "#212121"
