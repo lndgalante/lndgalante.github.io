@@ -10,22 +10,22 @@
  * @returns {NodeList}
  */
 function aload(nodes) {
-  'use strict';
+    'use strict';
 
-  var attribute = 'data-aload';
+    var attribute = 'data-aload';
 
-  nodes = nodes || window.document.querySelectorAll('[' + attribute + ']');
+    nodes = nodes || window.document.querySelectorAll('[' + attribute + ']');
 
-  if (nodes.length === undefined) {
-    nodes = [nodes];
-  }
+    if (nodes.length === undefined) {
+        nodes = [nodes];
+    }
 
-  [].forEach.call(nodes, function (node) {
-    node[ node.tagName !== 'LINK' ? 'src' : 'href' ] = node.getAttribute(attribute);
-    node.removeAttribute(attribute);
-  });
+    [].forEach.call(nodes, function (node) {
+        node[node.tagName !== 'LINK' ? 'src' : 'href'] = node.getAttribute(attribute);
+        node.removeAttribute(attribute);
+    });
 
-  return nodes;
+    return nodes;
 }
 
 (function (root, factory) {
@@ -355,8 +355,7 @@ function aload(nodes) {
          * @returns {Object}
          */
         var getDataOptions = function (options) {
-            return !options || !(typeof JSON === 'object' && typeof JSON.parse === 'function') ?
-                {} :
+            return !options || !(typeof JSON === 'object' && typeof JSON.parse === 'function') ? {} :
                 JSON.parse(options);
         };
 
@@ -673,24 +672,24 @@ function aload(nodes) {
     });
 
 
-    function addClass(el, className) {
-        if (el.classList)
-            el.classList.add(className)
-        else if (!hasClass(el, className))
-            el.className += " " + className
-    }
+function addClass(el, className) {
+    if (el.classList)
+        el.classList.add(className)
+    else if (!hasClass(el, className))
+        el.className += " " + className
+}
 
-    function removeClass(el, className) {
-        if (el.classList)
-            el.classList.remove(className)
-        else if (hasClass(el, className)) {
-            var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
-            el.className = el
-                .className
-                .replace(reg, ' ')
-        }
+function removeClass(el, className) {
+    if (el.classList)
+        el.classList.remove(className)
+    else if (hasClass(el, className)) {
+        var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+        el.className = el
+            .className
+            .replace(reg, ' ')
     }
-    
+}
+
 window.onload = function () {
     smoothScroll.init({
         speed: 1500,
