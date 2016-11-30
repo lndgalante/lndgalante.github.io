@@ -20,6 +20,12 @@ body {
     overflow: auto;
 }
 
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -60,13 +66,6 @@ header {
     margin: 0 auto;
     width: 768px;
 }
-
-
-/*header .container {
-    transform: translateY(-45%);
-    position: relative;
-    top: 45%;
-}*/
 
 header h1,
 section h2 {
