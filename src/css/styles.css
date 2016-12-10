@@ -176,15 +176,3 @@ section {
         width: 65%;
     }
 }
-
-body::-webkit-scrollbar {
-    width: 0.7em;
-}
-
-body::-webkit-scrollbar-track {
-    box-shadow: none;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: rgba(33, 33, 33, 0.4);
-}
