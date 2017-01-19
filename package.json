@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "version": "1.0.0",
-  "description": "## try it here: https://lndio.herokuapp.com/",
+  "description": "## try it here: https://leonardogalante.com/",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
