@@ -110,8 +110,20 @@ section {
     text-align: left;
 }
 
+.text-left>h3,
+.text-left>h4,
+.text-left>h5 {
+    padding-left: 22.5px;
+}
+
 .text-right {
     text-align: right;
+}
+
+.text-right>h3,
+.text-right>h4,
+.text-right>h5 {
+    padding-right: 22.5px;
 }
 
 .text-center {
