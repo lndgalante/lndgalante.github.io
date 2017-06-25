@@ -1,27 +1,26 @@
 {
-  "name": "personal-site",
+  "name": "fenwil.github.io",
   "version": "1.0.0",
-  "description": "## try it here: https://leonardogalante.com/",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fenwil/personal-site.git"
+    "url": "git+https://github.com/Fenwil/fenwil.github.io.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Fenwil/personal-site/issues"
+    "url": "https://github.com/Fenwil/fenwil.github.io/issues"
   },
-  "homepage": "https://github.com/Fenwil/personal-site#readme",
-  "devDependencies": {
+  "homepage": "https://github.com/Fenwil/fenwil.github.io#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.13",
-    "gulp-htmlmin": "^2.0.0",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.0"
+    "gulp-babel": "^6.1.2",
+    "gulp-uglify": "^3.0.0"
   }
 }
