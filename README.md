@@ -1,4 +1,5 @@
 # fenwil.github.io
 My personal site
 
-I used this frame for my projects: https://dribbble.com/shots/986009-Flat-Vector-Chrome-Frame
+Icons: [http://ego-icons.com](ego-icons)
+Framework CSS: [http://bulma.io](bulma)
