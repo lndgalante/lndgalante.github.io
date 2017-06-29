@@ -20,10 +20,15 @@ function hideAll() {
   sections.forEach(section => section.classList.add('is-hidden'))
 }
 
-menuItem.forEach(item =>
+menuItem.forEach(item => {
   item.addEventListener('click', function() {
     removeActives()
     this.classList.add('is-active')
+
+    if (burger.classList.contains('is-active')) {
+      burger.classList.remove('is-active')
+      menu.classList.remove('is-active')
+    }
 
     if (this.classList.contains('about')) {
       hideAll()
@@ -39,5 +44,5 @@ menuItem.forEach(item =>
       hideAll()
       linksSection.classList.remove('is-hidden')
     }
-  }),
-)
+  })
+})
