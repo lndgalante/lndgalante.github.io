@@ -17,20 +17,6 @@ const uglify = require('gulp-uglify')
 const svgmin = require('gulp-svgmin')
 const imagemin = require('gulp-imagemin')
 
-gulp.task('html', () => {
-  gulp
-    .src('src/index.html')
-    .pipe(
-      inject(gulp.src('dist/app.min.js'), {
-        starttag: '/* inject:js */',
-        endtag: '/* endinject */',
-        transform: (filePath, file) => file.contents.toString('utf8'),
-      })
-    )
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./'))
-})
-
 gulp.task('css', () =>
   gulp
     .src('src/*.css')
@@ -50,6 +36,27 @@ gulp.task('js', () =>
     .pipe(gulp.dest(destination))
 )
 
+gulp.task('html', () => {
+  gulp
+    .src('src/index.html')
+    .pipe(
+      inject(gulp.src('dist/app.min.js'), {
+        starttag: '/* inject:js */',
+        endtag: '/* endinject */',
+        transform: (filePath, file) => file.contents.toString('utf8'),
+      })
+    )
+    .pipe(
+      inject(gulp.src('dist/styles.min.css'), {
+        starttag: '/* inject:css */',
+        endtag: '/* endinject */',
+        transform: (filePath, file) => file.contents.toString('utf8'),
+      })
+    )
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./'))
+})
+
 gulp.task('images', () =>
   gulp
     .src('src/assets/img/*')
@@ -62,9 +69,9 @@ gulp.task('images', () =>
     .pipe(gulp.dest(destination))
 )
 
-gulp.task('default', ['html', 'css', 'js', 'images'], () => {
-  gulp.watch('src/index.html', ['html'])
+gulp.task('default', ['css', 'js', 'html', 'images'], () => {
   gulp.watch('src/*.css', ['css'])
   gulp.watch('src/app.js', ['js'])
+  gulp.watch('src/index.html', ['html'])
   gulp.watch('src/assets/img/*', ['images'])
 })
