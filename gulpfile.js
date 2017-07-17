@@ -14,7 +14,6 @@ const cleanCSS = require('gulp-clean-css')
 const babel = require('gulp-babel')
 const uglify = require('gulp-uglify')
 // Images
-const svgmin = require('gulp-svgmin')
 const imagemin = require('gulp-imagemin')
 
 gulp.task('css', () =>
@@ -33,6 +32,18 @@ gulp.task('js', () =>
     .pipe(babel({ presets: ['es2015'] }))
     .pipe(uglify().on('error', e => console.log(e)))
     .pipe(rename('app.min.js'))
+    .pipe(gulp.dest(destination))
+)
+
+gulp.task('images', () =>
+  gulp
+    .src('src/assets/img/*')
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 2 }),
+        imagemin.svgo({ plugins: [{ removeViewBox: true }] }),
+      ])
+    )
     .pipe(gulp.dest(destination))
 )
 
@@ -56,22 +67,9 @@ gulp.task('html', () => {
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('./'))
 })
-
-gulp.task('images', () =>
-  gulp
-    .src('src/assets/img/*')
-    .pipe(
-      imagemin([
-        imagemin.optipng({ optimizationLevel: 2 }),
-        imagemin.svgo({ plugins: [{ removeViewBox: true }] }),
-      ])
-    )
-    .pipe(gulp.dest(destination))
-)
-
 gulp.task('default', ['css', 'js', 'html', 'images'], () => {
   gulp.watch('src/*.css', ['css'])
   gulp.watch('src/app.js', ['js'])
-  gulp.watch('src/index.html', ['html'])
   gulp.watch('src/assets/img/*', ['images'])
+  gulp.watch('src/index.html', ['html'])
 })

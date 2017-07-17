@@ -17,7 +17,6 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-inject": "^4.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-svgmin": "^1.2.4",
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6"
   },
