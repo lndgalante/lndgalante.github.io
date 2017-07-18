@@ -5,7 +5,6 @@ const menuItem = document.querySelectorAll('.nav-item')
 const sections = document.querySelectorAll('section')
 const aboutSection = document.querySelector('.about-section')
 const projectsSection = document.querySelector('.projects-section')
-const linksSection = document.querySelector('.links-section')
 
 burger.addEventListener('click', function() {
   this.classList.toggle('is-active')
@@ -38,11 +37,6 @@ menuItem.forEach(item => {
     if (this.classList.contains('projects')) {
       hideAll()
       projectsSection.classList.remove('is-hidden')
-    }
-
-    if (this.classList.contains('links')) {
-      hideAll()
-      linksSection.classList.remove('is-hidden')
     }
   })
 })
