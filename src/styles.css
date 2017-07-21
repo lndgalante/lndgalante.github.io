@@ -1,0 +1,56 @@
+a.nav-item:not(.button).is-tab.is-active {
+  border-bottom: 3px solid #549fff;
+  color: #549fff;
+}
+
+a.nav-item:not(.button).is-tab:hover {
+  border-bottom-color: #549fff;
+}
+
+.nav-toggle.is-active span {
+  background-color: #549fff;
+}
+
+.logo-lg {
+  width: 112px;
+  height: 28px;
+}
+
+.logo-lg .st0 {
+  fill: #549fff;
+}
+
+.media-content a {
+  color: #1078ff;
+}
+
+.media-content a:hover {
+  color: #363636;
+}
+
+.about-icon {
+  width: 42px;
+  height: 42px;
+}
+
+.about-icon .st0 {
+  fill: #58595b;
+}
+
+.about-icon .st1 {
+  fill: none;
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.footer-icon:hover path {
+  fill: #363636;
+}
+
+.footer-icon path {
+  fill: #549fff;
+}
