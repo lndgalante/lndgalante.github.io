@@ -12,7 +12,6 @@ const unCSS = require('gulp-uncss')
 const cleanCSS = require('gulp-clean-css')
 // JavaScript
 const babel = require('gulp-babel')
-const uglify = require('gulp-uglify')
 // Images
 const imagemin = require('gulp-imagemin')
 
@@ -37,7 +36,7 @@ gulp.task('html', () => {
     .pipe(gulp.dest('./'))
 })
 
-gulp.task('css', ['html'], () =>
+gulp.task('css', () =>
   gulp
     .src('src/*.css')
     .pipe(concat('styles.css'))
@@ -47,11 +46,10 @@ gulp.task('css', ['html'], () =>
     .pipe(gulp.dest(destination))
 )
 
-gulp.task('js', () =>
+gulp.task('javascript', () =>
   gulp
     .src('src/app.js')
-    .pipe(babel({ presets: ['es2015'] }))
-    .pipe(uglify().on('error', e => console.log(e)))
+    .pipe(babel({ presets: ['babili'] }))
     .pipe(rename('app.min.js'))
     .pipe(gulp.dest(destination))
 )
@@ -68,9 +66,9 @@ gulp.task('images', () =>
     .pipe(gulp.dest(destination))
 )
 
-gulp.task('default', ['html', 'css', 'js', 'images'], () => {
+gulp.task('default', ['html', 'css', 'javascript', 'images'], () => {
   gulp.watch('src/index.html', ['html'])
   gulp.watch('src/*.css', ['css'])
-  gulp.watch('src/app.js', ['js'])
+  gulp.watch('src/app.js', ['javascript'])
   gulp.watch('src/assets/img/*', ['images'])
 })
