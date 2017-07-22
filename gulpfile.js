@@ -22,6 +22,7 @@ gulp.task('html', () => {
       inject(gulp.src('dist/app.min.js'), {
         starttag: '/* inject:js */',
         endtag: '/* endinject */',
+        removeTags: true,
         transform: (filePath, file) => file.contents.toString('utf8'),
       })
     )
@@ -29,6 +30,7 @@ gulp.task('html', () => {
       inject(gulp.src('dist/styles.min.css'), {
         starttag: '/* inject:css */',
         endtag: '/* endinject */',
+        removeTags: true,
         transform: (filePath, file) => file.contents.toString('utf8'),
       })
     )
