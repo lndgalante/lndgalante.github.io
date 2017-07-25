@@ -47,9 +47,10 @@ a.media-left {
 
 .footer-icon,
 .ldin,
-.gml {
-  width: 24px;
-  height: 24px;
+.gml,
+.gh {
+  width: 25px;
+  height: 25px;
   display: inline-block;
 }
 
@@ -62,22 +63,36 @@ a.media-left {
 }
 
 .ldin .st0,
-.gml .st0 {
+.ldin .st1,
+.gml .st0,
+.gh .st0 {
   fill: none;
   stroke: #549fff;
   stroke-miterlimit: 10;
 }
 
-.ldin .st0 {
-  stroke-width: 0.25;
+.ldin .st1 {
+  width: 1.3px;
+  height: 4px;
+}
+
+.ldin .st0,
+.ldin .st1 {
+  stroke-width: 0.3;
+}
+
+.gh .st0 {
+  stroke-width: 0.35;
 }
 
 .gml .st0 {
-  stroke-width: 0.65;
+  stroke-width: 0.55;
 }
 
 .ldin:hover .st0,
-.gml:hover .st0 {
+.ldin:hover .st1,
+.gml:hover .st0,
+.gh:hover .st0 {
   fill: none;
   stroke: #58595b;
   stroke-miterlimit: 10;
