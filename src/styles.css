@@ -7,6 +7,10 @@ a.nav-item:not(.button).is-tab:hover {
   border-bottom-color: #549fff;
 }
 
+a.media-left {
+  margin-right: 1.3rem;
+}
+
 .nav-toggle.is-active span {
   background-color: #549fff;
 }
@@ -41,16 +45,40 @@ a.nav-item:not(.button).is-tab:hover {
   fill: none;
 }
 
-.footer-icon {
+.footer-icon,
+.ldin,
+.gml {
   width: 24px;
   height: 24px;
   display: inline-block;
 }
 
-.footer-icon:hover path {
-  fill: #363636;
-}
-
 .footer-icon path {
   fill: #549fff;
+}
+
+.footer-icon:hover path {
+  fill: #58595b;
+}
+
+.ldin .st0,
+.gml .st0 {
+  fill: none;
+  stroke: #549fff;
+  stroke-miterlimit: 10;
+}
+
+.ldin .st0 {
+  stroke-width: 0.25;
+}
+
+.gml .st0 {
+  stroke-width: 0.65;
+}
+
+.ldin:hover .st0,
+.gml:hover .st0 {
+  fill: none;
+  stroke: #58595b;
+  stroke-miterlimit: 10;
 }
