@@ -97,3 +97,19 @@ a.media-left {
   stroke: #58595b;
   stroke-miterlimit: 10;
 }
+
+.feather-icon {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: #549fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feather-icon:hover path,
+.feather-icon:hover polyline,
+.feather-icon:hover line {
+  stroke: #58595b;
+}
