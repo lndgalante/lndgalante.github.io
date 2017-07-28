@@ -1,10 +1,23 @@
+a.nav-item:not(.button) {
+  color: #363636;
+}
+
+a.nav-item:not(.button):hover {
+  color: #212121;
+}
+
 a.nav-item:not(.button).is-tab.is-active {
   border-bottom: 3px solid #549fff;
-  color: #549fff;
+  color: #076ff6;
 }
 
 a.nav-item:not(.button).is-tab:hover {
   border-bottom-color: #549fff;
+}
+
+.nav.has-shadow {
+  -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, .2);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.2);
 }
 
 a.media-left {
