@@ -1,6 +1,6 @@
-const menu = document.querySelector('.nav-menu')
-const burger = document.querySelector('.nav-toggle')
-const menuItem = document.querySelectorAll('.nav-item')
+const menu = document.querySelector('.navbar-menu')
+const burger = document.querySelector('.navbar-burger')
+const menuItem = document.querySelectorAll('.navbar-item')
 
 const sections = document.querySelectorAll('section')
 const aboutSection = document.querySelector('.about-section')
