@@ -61,7 +61,8 @@ a.media-left {
 .footer-icon,
 .ldin,
 .gml,
-.gh {
+.gh,
+.wdp {
   width: 25px;
   height: 25px;
   display: inline-block;
@@ -78,6 +79,7 @@ a.media-left {
 .ldin .st0,
 .ldin .st1,
 .gml .st0,
+.wdp .st0,
 .gh .st0 {
   fill: none;
   stroke: #549fff;
@@ -98,6 +100,10 @@ a.media-left {
   stroke-width: 0.35;
 }
 
+.wdp .st0 {
+  stroke-width: 2.5;
+}
+
 .gml .st0 {
   stroke-width: 0.55;
 }
@@ -105,7 +111,8 @@ a.media-left {
 .ldin:hover .st0,
 .ldin:hover .st1,
 .gml:hover .st0,
-.gh:hover .st0 {
+.gh:hover .st0,
+.wdp:hover .st0 {
   fill: none;
   stroke: #58595b;
   stroke-miterlimit: 10;
