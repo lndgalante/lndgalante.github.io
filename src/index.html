@@ -32,7 +32,7 @@
         <h1 class="is-hidden">Leonardo Galante</h1>
       </a>
 
-      <div class="navbar-burger burger" data-target="navMenu">
+      <div class="navbar-burger" data-target="navMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -41,13 +41,14 @@
 
     <div id="navMenu" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item is-tab about is-active">About</a>
-        <a class="navbar-item is-tab projects">Projects</a>
+        <a data-scroll href="#about" class="navbar-item is-tab about">About</a>
+        <a data-scroll href="#projects" class="navbar-item is-tab projects">Projects</a>
+        <!-- <a data-scroll href="#references" class="navbar-item is-tab references">References</a> -->
       </div>
     </div>
   </nav>
 
-  <section class="section about-section">
+  <section class="section" id="about">
     <div class="container">
       <div class="content">
         <h2>Hi there! 👋</h2>
@@ -106,8 +107,9 @@
           <div class="media-content">
             I'm a <a target="_blank" rel="noopener" href="https://www.freecodecampba.org">freeCodeCampBA</a> co-organizer,
             a learning community (+700 devs) where everyone shares their programming knowledge.
-            <br>I'm also an <a target="_blank" rel="noopener" href="https://auth0.com/ambassador-program">Auth0</a> ambassador,
-            which means they help me grow the community. And I'm a <a target="_blank" rel="noopener" href="https://twitter.com/javascript_101">JS101</a>            co-organizer which is a free monthly workshop.
+            <br>I'm also an <a target="_blank" rel="noopener" href="https://auth0.com/ambassador-program">Auth0</a> ambassador
+            and a <a target="_blank" rel="noopener" href="https://twitter.com/javascript_101">JS101</a> co-organizer which
+            is a free monthly workshop.
           </div>
         </article>
         <article class="media">
@@ -184,7 +186,7 @@
     </div>
   </section>
 
-  <section class="section projects-section is-hidden">
+  <section class="section" id="projects">
     <div class="container">
       <div class="content">
         <h2>Want to see something cool? 🤓</h2>
@@ -290,6 +292,53 @@
     </div>
 
   </section>
+
+  <!-- <section class="section" id="references">
+    <div class="container">
+      <div class="content">
+        <h2>What people says 🗣</h2>
+      </div>
+      <div class="box">
+        <article class="media">
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong><a href="https://www.linkedin.com/in/vcalvello" target="_blank" rel="noopener">Victor Calvello</a></strong><small>, Underscope Co-founder</small>
+                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas.
+                Nullam condimentum luctus turpis.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="box">
+        <article class="media">
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong><a href="https://www.linkedin.com/in/santiagoscanlan" target="_blank" rel="noopener">Santiago Scanlan</a></strong><small>, Plataforma5 Co-founder</small>
+                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas.
+                Nullam condimentum luctus turpis.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="box">
+        <article class="media">
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong><a href="https://www.linkedin.com/in/christian-pati%C3%B1o-1038061a" target="_blank" rel="noopener">Christian Patiño</a></strong><small>, CoderHouse Co-founder</small>
+                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas.
+                Nullam condimentum luctus turpis.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section> -->
 
   <footer class="footer">
     <div class="container">

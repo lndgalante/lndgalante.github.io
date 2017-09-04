@@ -50,7 +50,8 @@ gulp.task('css', () =>
 
 gulp.task('javascript', () =>
   gulp
-    .src('src/app.js')
+    .src('src/*.js')
+    .pipe(concat('app.js'))
     .pipe(babel({ presets: ['babili'] }))
     .pipe(rename('app.min.js'))
     .pipe(gulp.dest(destination))
