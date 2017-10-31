@@ -14,7 +14,7 @@ const smoothScrollWithoutHash = function(selector, settings) {
 
 smoothScrollWithoutHash('a[href*="#"]', {
   speed: 400,
-  header: '.navbar',
+  header: '.navbar'
 })
 
 const menu = document.querySelector('.navbar-menu')
