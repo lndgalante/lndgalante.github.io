@@ -1,8 +1,10 @@
 :root {
-  --font-color: #4a4a4a;
-  --background-color: #f8f9fa;
-  --main-color: rgba(138, 43, 226, 0.9);
-  --secondary-color: #3f52e3;
+  --main-font-color: #4a4a4a;
+  --link-font-color: #3f52e3;
+  --main-background-color: #f8f9fa;
+  --header-font-color: #ffffff;
+  --header-background-color: #868e96;
+  --header-font-background-color: rgba(138, 43, 226, 0.9);
 }
 
 * {
@@ -13,8 +15,9 @@
 
 body {
   font-size: 1rem;
-  line-height: 1.54;
-  color: var(--font-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  color: var(--main-font-color);
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -29,15 +32,15 @@ main {
   width: 100vw;
   min-height: 100vh;
   padding-bottom: 3em;
-  background-color: var(--background-color);
+  background-color: var(--main-background-color);
 }
 
 header {
   height: 340px;
-  background-color: #868e96;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: var(--header-background-color);
 }
 
 header > .container {
@@ -50,12 +53,12 @@ h1 {
   line-height: 1.2;
   padding: 0 0.4em;
   display: inline-block;
-  color: #fff;
+  color: var(--header-font-color);
   font-size: 3.5rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   mix-blend-mode: hard-light;
-  background-color: var(--main-color);
+  background-color: var(--header-font-background-color);
 }
 
 h2 {
@@ -103,21 +106,21 @@ footer > .container {
 }
 
 a {
-  color: var(--secondary-color);
+  color: var(--link-font-color);
   text-decoration: none;
 }
 
 svg {
-  stroke: var(--secondary-color);
+  stroke: var(--link-font-color);
   transition: all 0.2s ease;
 }
 
 a:hover {
-  color: var(--font-color);
+  color: var(--main-font-color);
 }
 
 a:hover svg {
-  stroke: var(--font-color);
+  stroke: var(--main-font-color);
 }
 
 @media screen and (max-width: 480px) {
