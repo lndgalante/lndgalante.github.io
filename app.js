@@ -7,7 +7,7 @@ const getVisual = async () => {
 const setHeaderBackground = async () => {
   const background = await getVisual()
   const header = document.querySelector('header')
-  header.style.backgroundImage = `url(${background})`
+  header.style.backgroundImage = `url(https://crossorig.in/?corsit=${background})`
 }
 
 setHeaderBackground()
