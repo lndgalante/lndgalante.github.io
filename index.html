@@ -14,8 +14,138 @@
           href="favicon.png">
     <link rel="stylesheet"
           href="https://rsms.me/inter/inter-ui.css">
-    <link rel="stylesheet"
-          href="style.css">
+    <style>
+      :root {
+        --main-font-color: #4a4a4a;
+        --link-font-color: #3f52e3;
+        --main-background-color: #f8f9fa;
+        --header-font-color: #ffffff;
+        --header-background-color: #868e96;
+        --header-font-background-color: rgba(138, 43, 226, 0.9);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 1rem;
+        line-height: 1.6;
+        overflow-x: hidden;
+        color: var(--main-font-color);
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Inter UI', sans-serif;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      main {
+        width: 100vw;
+        min-height: 100vh;
+        padding-bottom: 3em;
+        background-color: var(--main-background-color);
+      }
+
+      header {
+        height: 340px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: var(--header-background-color);
+      }
+
+      header>.container {
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      h1 {
+        line-height: 1.2;
+        padding: 0 0.4em;
+        display: inline-block;
+        color: var(--header-font-color);
+        font-size: 3.5rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        mix-blend-mode: hard-light;
+        background-color: var(--header-font-background-color);
+      }
+
+      h2 {
+        margin-bottom: 0.3em;
+      }
+
+      .container {
+        height: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+        padding: 1.2em;
+      }
+
+      section {
+        margin: 2em 0;
+        font-size: 1.4rem;
+      }
+
+      section:last-child>p {
+        padding-top: 0.2em;
+      }
+
+      blockquote {
+        display: block;
+        font-style: italic;
+      }
+
+      blockquote:last-child {
+        margin-top: 0.2em;
+      }
+
+      blockquote>span {
+        font-style: normal;
+      }
+
+      footer>.container {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .icon-box {
+        display: flex;
+        justify-content: space-around;
+        width: 180px;
+      }
+
+      a {
+        color: var(--link-font-color);
+        text-decoration: none;
+      }
+
+      svg {
+        stroke: var(--link-font-color);
+        transition: all 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--main-font-color);
+      }
+
+      a:hover svg {
+        stroke: var(--main-font-color);
+      }
+
+      @media screen and (max-width: 480px) {
+        header>h1 {
+          font-size: 2.3rem;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -221,7 +351,21 @@
       </footer>
     </main>
 
-    <script src="app.js"></script>
+    <script>
+      const getVisual = async () => {
+        const res = await fetch('https://archillect-api.now.sh/random')
+        const image = await res.json()
+        return image.source
+      }
+
+      const setHeaderBackground = async () => {
+        const background = await getVisual()
+        const header = document.querySelector('header')
+        header.style.backgroundImage = `url(${background})`
+      }
+
+      setHeaderBackground()
+    </script>
   </body>
 
 </html>
