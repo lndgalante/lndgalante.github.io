@@ -391,9 +391,13 @@
       }
 
       const setHeaderBackground = async () => {
-        const background = await getVisual()
-        const header = document.querySelector('header')
-        header.style.backgroundImage = `url(${background})`
+        try {
+          const background = await getVisual()
+          const header = document.querySelector('header')
+          header.style.backgroundImage = `url(${background})`
+        } catch (error) {
+          console.error(error)
+        }
       }
 
       setHeaderBackground()
