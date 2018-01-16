@@ -113,7 +113,7 @@
       }
 
       section:last-child>p {
-        padding-top: 0.2em;
+        padding: 0.3em;
       }
 
       blockquote {
@@ -161,6 +161,11 @@
 
       a:hover svg {
         stroke: var(--main-font-color);
+      }
+
+      .emoji {
+        width: 30px;
+        vertical-align: top;
       }
 
       @media screen and (max-width: 480px) {
@@ -337,7 +342,7 @@
             <p>
               <a href="https://auth0.com/ambassador-program"
                  target="_blank"
-                 rel="noopener">👨‍🚀 &nbsp;Auth0 ambassador</a>
+                 rel="noopener">👨🏻‍🚀 &nbsp;Auth0 ambassador</a>
             </p>
             <p>
               <a href="https://github.com/lndgalante/codewars-katas"
@@ -367,14 +372,17 @@
             <p>
               <a href="https://github.com/lndgalante/courses-list"
                  target="_blank"
-                 rel="noopener">👨‍🎓 &nbsp;Courses list</a>
+                 rel="noopener">👩‍🏫 &nbsp;Courses list</a>
             </p>
           </section>
         </div>
       </article>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.5.0/2/twemoji.min.js"></script>
     <script>
+      twemoji.parse(document.body, { folder: 'svg', ext: '.svg' })
+
       const getVisual = async () => {
         const res = await fetch('https://archillect-api.now.sh/random')
         const { source } = await res.json()
