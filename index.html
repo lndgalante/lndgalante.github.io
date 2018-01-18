@@ -385,6 +385,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.5.0/2/twemoji.min.js"></script>
     <script>
+      console.log(`%c  ⎸⎸⎸Refresh to get a new random image  ⎸⎸⎸`, 'font-size: 16px; background: rgba(138, 43, 226, 0.8); font-family: Montserrat, sans-serif; color: #fff; text-transform: uppercase;');
+
       twemoji.parse(document.body, { folder: 'svg', ext: '.svg' })
 
       const getVisual = async () => {
@@ -399,7 +401,7 @@
           const header = document.querySelector('header')
           header.style.backgroundImage = `url(${background})`
         } catch (error) {
-          console.error(error)
+          throw new Error(error)
         }
       }
 
