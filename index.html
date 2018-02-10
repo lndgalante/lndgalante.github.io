@@ -81,10 +81,8 @@
 
     <style>
       :root {
-        --main-font-color: white;
         --link-font-color: #ababab;
-        --header-background-color: #868e96;
-        --header-font-background-color: #8233ff;
+        --header-background-color: #8233ff;
       }
 
       * {
@@ -94,10 +92,10 @@
       }
 
       body {
+        color: white;
         font-size: 1rem;
         line-height: 1.6;
         overflow-x: hidden;
-        color: var(--main-font-color);
         text-rendering: optimizeLegibility;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -137,23 +135,23 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         mix-blend-mode: hard-light;
-        background-color: var(--header-font-background-color);
+        background-color: var(--header-background-color);
       }
 
       h2 {
-        margin: 1rem 0 2rem 0;
+        margin-bottom: 1rem;
       }
 
       .container {
         height: 100%;
         max-width: 1060px;
         margin: 0 auto;
-        padding: 1.2em;
+        padding: 1.2rem;
       }
 
       section {
         font-size: 1.4rem;
-        margin: 3rem 0 5rem;
+        margin: 3rem 0 6rem;
       }
 
       section:last-child>p {
@@ -183,9 +181,9 @@
       }
 
       footer>.icon-box {
+        width: 180px;
         display: flex;
         justify-content: space-between;
-        width: 180px;
       }
 
       a {
