@@ -81,8 +81,8 @@
 
     <style>
       :root {
-        --link-font-color: #ababab;
-        --header-background-color: #8233ff;
+        --main-color: #ababab;
+        --secondary-color: #8233ff;
       }
 
       * {
@@ -135,7 +135,7 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         mix-blend-mode: hard-light;
-        background-color: var(--header-background-color);
+        background-color: var(--secondary-color);
       }
 
       h2 {
@@ -187,25 +187,44 @@
       }
 
       a {
-        color: var(--link-font-color);
+        color: var(--main-color);
         text-decoration: none;
+      }
+
+      a.grow {
+        position: relative;
+      }
+
+      a.grow::after {
+        content: ' ';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        border-bottom: 1px solid var(--secondary-color);
+        transition: 0.4s;
+      }
+
+      a.grow:hover::after {
+        width: 100%;
+        left: 0;
       }
 
       svg {
         stroke-width: 1.6;
-        stroke: var(--link-font-color);
+        stroke: var(--main-color);
         transition: all 300ms ease-in-out;
       }
 
       a:hover {
-        text-decoration: underline;
-        color: var(--main-font-color);
+        color: var(--main-color);
       }
 
       a:hover svg {
         stroke-width: 1.8;
         transform: scale(1.05);
-        stroke: var(--main-font-color);
+        stroke: white;
       }
 
       .emoji {
@@ -338,14 +357,17 @@
             <p>Mentoring about web development at coding academies such as
               <a href="https://www.coderhouse.com/@leonardogalante"
                  target="_blank"
-                 rel="noopener">CoderHouse</a> and DigitalHouse.</p>
+                 rel="noopener"
+                 class="grow">CoderHouse</a> and DigitalHouse.</p>
             <p>Organising
               <a href="https://freecodecampba.org"
                  target="_blank"
-                 rel="noopener">freeCodeCampBA</a> community and
+                 rel="noopener"
+                 class="grow">freeCodeCampBA</a> community and
               <a href="https://javascript-101.github.io"
                  target="_blank"
-                 rel="noopener">JS101</a> workshops with some awesome people.</p>
+                 rel="noopener"
+                 class="grow">JS101</a> workshops with some awesome people.</p>
           </section>
 
           <!-- Projects -->
@@ -355,17 +377,20 @@
             <p>
               <a href="https://chrome.google.com/webstore/detail/mercadolibre-m%C3%A1s-vendidos/ecmfdhafogloeacbceakgefanbkocdhk"
                  target="_blank"
-                 rel="noopener">Más Vendidos</a> a Chrome extension that sorts all the products from MercadoLibre by units sold.
+                 rel="noopener"
+                 class="grow">Más Vendidos</a> a Chrome extension that sorts all the products from MercadoLibre by units sold.
             </p>
             <p>
               <a href="https://archillect-api.now.sh/visuals"
                  target="_blank"
-                 rel="noopener">Archillect API</a> an unofficial API scrapper that retrieves a list of amazing images from Archillect.
+                 rel="noopener"
+                 class="grow">Archillect API</a> an unofficial API scrapper that retrieves a list of amazing images from Archillect.
             </p>
             <p>
               <a href="https://leonardogalante.com/postal-code"
                  target="_blank"
-                 rel="noopener">Postal Code</a> is a web application that shows your postal code based on your current location.
+                 rel="noopener"
+                 class="grow">Postal Code</a> is a web application that shows your postal code based on your current location.
             </p>
           </section>
 
@@ -395,43 +420,50 @@
               👨🏻‍🚀
               <a href="https://auth0.com/ambassador-program"
                  target="_blank"
-                 rel="noopener">Auth0 ambassador</a>
+                 rel="noopener"
+                 class="grow">Auth0 ambassador</a>
             </p>
             <p>
               🥋
               <a href="https://github.com/lndgalante/codewars-katas"
                  target="_blank"
-                 rel="noopener">Codewars katas</a>
+                 rel="noopener"
+                 class="grow">Codewars katas</a>
             </p>
             <p>
               📚
               <a href="https://github.com/lndgalante/reads"
                  target="_blank"
-                 rel="noopener">Books n' guides</a>
+                 rel="noopener"
+                 class="grow">Books n' guides</a>
             </p>
             <p>
               🎥
               <a href="https://github.com/lndgalante/events-assisted"
                  target="_blank"
-                 rel="noopener">Events assisted</a>
+                 rel="noopener"
+                 class="grow">Events assisted</a>
             </p>
             <p>
               🏁
               <a href="https://github.com/lndgalante/personal-goals"
                  target="_blank"
-                 rel="noopener">Personal goals</a>
+                 rel="noopener"
+                 class="grow">Personal goals</a>
             </p>
             <p>
               🛠
               <a href="https://github.com/lndgalante/tools-configuration"
                  target="_blank"
-                 rel="noopener">Helpful tools</a>
+                 rel="noopener"
+                 class="grow">Helpful tools</a>
             </p>
             <p>
               👩‍🏫
               <a href="https://github.com/lndgalante/courses-list"
                  target="_blank"
-                 rel="noopener">Courses list</a>
+                 rel="noopener"
+                 class="grow">Courses list</a>
             </p>
           </section>
         </div>
