@@ -116,7 +116,7 @@
       }
 
       header {
-        height: 340px;
+        height: 400px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -154,7 +154,13 @@
         height: 100%;
         max-width: 940px;
         margin: 0 auto;
-        padding: 1.2rem;
+        padding: 0.6rem 1.2rem;
+      }
+
+      .tilt {
+        transform-origin: 0;
+        transform-style: flat;
+        transform: skewY(-4deg);
       }
 
       section {
@@ -170,7 +176,7 @@
         display: block;
         font-style: italic;
         font-size: 1.12rem;
-        padding-left: 1em;
+        padding-left: 1rem;
         border-left: 2px solid var(--main-color);
       }
 
@@ -255,7 +261,7 @@
   <body>
     <main>
       <!-- Header -->
-      <header>
+      <header class="tilt">
         <div class="container">
           <h1>Leonardo Galante</h1>
         </div>
@@ -267,7 +273,7 @@
           <h2 class="hidden">you don't see me :D</h2>
 
           <!-- Social -->
-          <footer>
+          <footer class="tilt">
             <div class="icon-box">
               <!-- GitHub -->
               <a href="https://github.com/lndgalante"
