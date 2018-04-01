@@ -506,7 +506,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.5.0/2/twemoji.min.js"></script>
     <script>
-      console.log(`%c  ⎸⎸⎸Refresh to get a new random image  ⎸⎸⎸`, 'font-size: 16px; background: #8233ff; font-family: Montserrat, sans-serif; color: #fff; text-transform: uppercase;');
+      console.log(`%c  ⎸⎸⎸Refresh to get a new random image or wait 4 minutes  ⎸⎸⎸`, 'font-size: 16px; background: #8233ff; font-family: Montserrat, sans-serif; color: #fff; text-transform: uppercase;');
 
       twemoji.parse(document.body, { folder: 'svg', ext: '.svg' })
 
@@ -527,6 +527,9 @@
       }
 
       setHeaderBackground()
+
+      // Change background every 4 minutes
+      setInterval(() => setHeaderBackground(), 4 * 60000)
     </script>
   </body>
 
