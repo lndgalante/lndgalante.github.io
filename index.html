@@ -85,6 +85,7 @@
       :root {
         --main-color: hsla(0, 0%, 100%, .6);
         --secondary-color: #8233ff;
+        --text-color: #fefefe;
       }
 
       * {
@@ -94,7 +95,7 @@
       }
 
       body {
-        color: white;
+        color: var(--text-color);
         font-size: 1rem;
         line-height: 1.5;
         overflow-x: hidden;
@@ -165,20 +166,12 @@
         margin: 3.2rem 0 4rem;
       }
 
-      section:last-child>p {
-        padding: 0.3em;
-      }
-
       blockquote {
         display: block;
         font-style: italic;
         font-size: 1.12rem;
         padding-left: 1rem;
         border-left: 2px solid var(--main-color);
-      }
-
-      blockquote:last-child {
-        margin-top: 1em;
       }
 
       blockquote>footer {
@@ -419,13 +412,6 @@
           <!-- References -->
           <section>
             <h2>References</h2>
-
-            <blockquote>
-              <p>Leo is undoubtedly an exceptional person. Not only he is extremely capable in the professional aspect, but
-                above all he is an outstanding human being, always worried about helping others and infusing a great energy
-                into the group.</p>
-              <footer>- Santiago Scanlan, co-founder at Plataforma 5</footer>
-            </blockquote>
 
             <blockquote>
               <p>Leo is a great guy, always up-to-date with the latest technologies, specially those which are becoming the
