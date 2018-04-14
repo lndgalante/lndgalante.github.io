@@ -104,10 +104,6 @@
         font-family: 'Rubik', sans-serif;
       }
 
-      .hidden {
-        display: none;
-      }
-
       main {
         width: 100vw;
         min-height: 100vh;
@@ -116,15 +112,33 @@
         background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
       }
 
+      .hidden {
+        display: none;
+      }
+
+      .title,
+      .social-link {
+        display: flex;
+        align-items: center;
+      }
+
+
+      .container {
+        height: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 0.8em 1.2em;
+      }
+
       header {
         height: 100px;
       }
 
       header>.container {
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-flow: column;
+        grid-gap: 20px;
       }
 
       h1,
@@ -133,7 +147,6 @@
       }
 
       h1 {
-        color: white;
         line-height: 1.2;
         display: inline-block;
         font-size: 1.2rem;
@@ -147,12 +160,6 @@
         margin-bottom: 0.6em;
       }
 
-      .container {
-        height: 100%;
-        max-width: 940px;
-        margin: 0 auto;
-        padding: 0.8em 1.2em;
-      }
 
       section {
         font-size: 1.25rem;
@@ -163,8 +170,12 @@
         display: block;
         font-style: italic;
         font-size: 1.12rem;
-        padding-left: 1rem;
+        padding-left: 0.8em;
         border-left: 2px solid var(--main-color);
+      }
+
+      blockquote:last-child {
+        margin-top: 1em;
       }
 
       blockquote>footer {
@@ -175,16 +186,6 @@
         text-align: left;
         font-style: italic;
         color: #eee;
-      }
-
-      blockquote:last-child {
-        margin-top: 1em;
-      }
-
-      footer>.icon-box {
-        width: 160px;
-        display: flex;
-        justify-content: space-between;
       }
 
       a {
@@ -206,13 +207,13 @@
 
       a:hover svg {
         stroke-width: 1.8;
-        transform: scale(1.05);
+        transform: scale(1.07);
         stroke: var(--secondary-color);
       }
 
       .emoji {
         width: 30px;
-        margin-right: 4px;
+        margin-right: 3px;
         vertical-align: top;
       }
 
@@ -230,102 +231,99 @@
       <!-- Header -->
       <header>
         <div class="container">
+          <h1 class="title">Leonardo Galante</h1>
 
-          <h1>Leonardo Galante</h1>
+          <!-- GitHub -->
+          <a href="https://github.com/lndgalante"
+             target="_blank"
+             rel="noopener"
+             class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="feather feather-github"
+                 aria-labelledby="github"
+                 role="img">
+              <title id="github">GitHub</title>
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
 
-          <!-- Social -->
-          <footer>
-            <div class="icon-box">
-              <!-- GitHub -->
-              <a href="https://github.com/lndgalante"
-                 target="_blank"
-                 rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     width="24"
-                     height="24"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="2"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     class="feather feather-github"
-                     aria-labelledby="github"
-                     role="img">
-                  <title id="github">GitHub</title>
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
+          <!-- Twitter -->
+          <a href="https://twitter.com/lndgalante"
+             target="_blank"
+             rel="noopener"
+             class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="feather feather-twitter"
+                 role="img"
+                 aria-labelledby="twitter">
+              <title id="twitter">Twitter</title>
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
 
-              <!-- Twitter -->
-              <a href="https://twitter.com/lndgalante"
-                 target="_blank"
-                 rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     width="24"
-                     height="24"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="2"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     class="feather feather-twitter"
-                     role="img"
-                     aria-labelledby="twitter">
-                  <title id="twitter">Twitter</title>
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                </svg>
-              </a>
+          <!-- Gmail -->
+          <a href="mailto:lndgalante@gmail.com"
+             target="_blank"
+             rel="noopener"
+             class="social-link">
 
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="feather feather-send"
+                 aria-labelledby="gmail"
+                 role="img">
+              <title id="gmail">Gmail</title>
+              <line x1="22"
+                    y1="2"
+                    x2="11"
+                    y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </a>
 
-              <!-- Gmail -->
-              <a href="mailto:lndgalante@gmail.com"
-                 target="_blank"
-                 rel="noopener">
-
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     width="24"
-                     height="24"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="2"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     class="feather feather-send"
-                     aria-labelledby="gmail"
-                     role="img">
-                  <title id="gmail">Gmail</title>
-                  <line x1="22"
-                        y1="2"
-                        x2="11"
-                        y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </a>
-
-              <!-- Medium -->
-              <a href="https://medium.com/@lndgalante"
-                 target="_blank"
-                 rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     width="24"
-                     height="24"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="2"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     class="feather feather-edit-2"
-                     aria-labelledby="medium"
-                     role="img">
-                  <title id="medium">Medium</title>
-                  <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
-                </svg>
-              </a>
-            </div>
-          </footer>
+          <!-- Medium -->
+          <a href="https://medium.com/@lndgalante"
+             target="_blank"
+             rel="noopener"
+             class="social-link">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="feather feather-edit-2"
+                 aria-labelledby="medium"
+                 role="img">
+              <title id="medium">Medium</title>
+              <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+            </svg>
+          </a>
         </div>
       </header>
 
