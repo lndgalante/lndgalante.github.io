@@ -45,13 +45,15 @@
   <meta name="og:type" content="website">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
   <!-- General Styles -->
   <style>
     :root {
-      --main-color: #444;
-      --secondary-color: #555;
+      --white: #ffffff;
+      --black: #111111;
+      --silver: #f1f3f5;
+      --violet: #4e54c8;
     }
 
     * {
@@ -61,10 +63,11 @@
     }
 
     body {
-      color: var(--main-color);
       font-size: 1rem;
+      font-weight: 400;
       line-height: 1.5;
       overflow-x: hidden;
+      color: var(--white);
       text-rendering: optimizeLegibility;
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
@@ -77,10 +80,6 @@
       padding-bottom: 3em;
     }
 
-    .hidden {
-      display: none;
-    }
-
     .title,
     .social-link {
       display: flex;
@@ -89,13 +88,13 @@
 
     .container {
       height: 100%;
-      max-width: 940px;
       margin: 0 auto;
-      padding: 0.8em 1.2em;
+      max-width: 940px;
+      padding: 0 1.2em;
     }
 
     header {
-      height: 120px;
+      height: 100px;
     }
 
     header>.container {
@@ -103,84 +102,97 @@
       grid-template-columns: 1fr;
       grid-auto-flow: column;
       grid-gap: 20px;
-    }
-
-    h1,
-    h2 {
-      color: var(--secondary-color);
+      padding: 0 1.2em;
     }
 
     h1 {
       line-height: 1.2;
       display: inline-block;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      font-weight: 300;
       letter-spacing: 0.15em;
       text-transform: uppercase;
+      color: var(--violet);
     }
 
     h2 {
-      font-size: 1.8rem;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.3em;
-    }
-
-    section {
-      font-size: 1.2rem;
-      margin: 1.5em 0 3em;
+      color: var(--silver);
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.8em;
+      text-transform: uppercase;
     }
 
     p {
-      margin-bottom: 0.15em;
+      margin-bottom: 0.1em;
+    }
+
+    section {
+      font-size: 1.18rem;
+      margin: 1.5em 0 3em;
+      border-radius: 4px;
+      padding: 1em;
+      background: linear-gradient(141deg, rgba(78, 84, 200, 0.9) 0%, rgba(143, 148, 251, 0.9) 100%);
+      box-shadow: 0 6px 8px 0 rgba(164, 164, 164, .21)
+    }
+
+    section:first-child {
+      margin-top: 0;
+    }
+
+    section:last-child {
+      font-size: 1.15rem;
     }
 
     blockquote {
       display: block;
-      font-style: italic;
-      font-size: 1.12rem;
+      font-size: 1.1rem;
       padding-left: 0.8em;
-      border-left: 2px solid var(--main-color);
+      border-left: 2px solid var(--silver);
     }
 
     blockquote:last-child {
-      margin-top: 1em;
+      margin-top: 0.8em;
     }
 
     blockquote>footer {
       font-style: normal;
-      margin-top: 0.5em;
+      margin-top: 0.4em;
       padding: 0;
-      font-size: 12pt;
-      text-align: left;
+      font-size: 1rem;
       font-style: italic;
-      color: var(--secondary-color)
+      color: var(--silver);
     }
 
     a {
-      color: var(--main-color);
-      text-decoration: underline;
+      color: var(--white);
+      font-weight: 500;
+      text-decoration: none;
+      opacity: 1;
+      -webkit-transition: opacity .15s ease-out;
+      transition: opacity .15s ease-out;
     }
 
     a:hover {
-      font-weight: 600;
+      opacity: .8;
     }
 
     svg {
       width: 20px;
       stroke-width: 1.6;
-      stroke: var(--main-color);
+      stroke: var(--violet);
       transition: all 300ms ease-in-out;
       will-change: transform;
     }
 
     a:hover svg {
-      stroke-width: 1.8;
       transform: scale(1.2);
     }
 
     .emoji {
-      width: 30px;
-      margin-right: 3px;
-      vertical-align: top;
+      width: 28px;
+      margin-right: 6px;
     }
 
     .miscellaneous {
@@ -188,6 +200,11 @@
       grid-gap: 10px;
       grid-auto-rows: 45px;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .miscellaneous>div {
+      display: flex;
+      align-items: center;
     }
   </style>
 </head>
@@ -241,41 +258,39 @@
     <!-- Content -->
     <article>
       <div class="container">
-        <h2 class="hidden">you don't see me :D</h2>
         <!-- About -->
         <section>
-          <h2>&lt;About /&gt;
-          </h2>
+          <h2>about</h2>
 
           <p>I'm a JavaScript developer based in Buenos Aires working with React/Redux at
-            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="grow">MercadoLibre</a>.</p>
-          <p>Mentoring about web development at coding schools such as
-            <a href="https://www.coderhouse.com/@leonardogalante" target="_blank" rel="noopener noreferrer" class="grow">CoderHouse</a> and
-            <a href="https://www.digitalhouse.com" target="_blank" rel="noopener noreferrer" class="grow">DigitalHouse</a>.</p>
+            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer">MercadoLibre</a>.</p>
+          <p>Mentoring about web development to students online from around the globe at
+            <a href="https://careerfoundry.com" target="_blank" rel="noopener noreferrer">CareerFoundry</a>.</p>
           <p>Organising
-            <a href="https://freecodecampba.org" target="_blank" rel="noopener noreferrer" class="grow">freeCodeCampBA</a> community and
-            <a href="https://javascript-101.github.io" target="_blank" rel="noopener noreferrer" class="grow">JS101</a> workshops with some awesome people.</p>
+            <a href="https://freecodecampba.org" target="_blank" rel="noopener noreferrer">freeCodeCampBA</a> community and
+            <a href="https://javascript-101.github.io" target="_blank" rel="noopener noreferrer">JS101</a> free workshops with some lovely people.</p>
         </section>
 
         <!-- Projects -->
         <section>
-          <h2>&lt;Projects /&gt;</h2>
+          <h2>projects</h2>
 
           <p>
             <a href="https://chrome.google.com/webstore/detail/mercadolibre-m%C3%A1s-vendidos/ecmfdhafogloeacbceakgefanbkocdhk" target="_blank"
-              rel="noopener noreferrer" class="grow">Más Vendidos</a> a Chrome extension that sorts all the products from MercadoLibre by units sold.
+              rel="noopener noreferrer">Más Vendidos</a> a Chrome extension that sorts all the products from MercadoLibre by units sold.
           </p>
           <p>
-            <a href="https://archillect-api.now.sh/visuals" target="_blank" rel="noopener noreferrer" class="grow">Archillect API</a> an unofficial API scrapper that retrieves a list of amazing images from Archillect.
+            <a href="https://archillect-api.now.sh/visuals" target="_blank" rel="noopener noreferrer">Archillect API</a> an unofficial API scrapper that retrieves a list of amazing images from Archillect.
           </p>
           <p>
-            <a href="https://leonardogalante.com/postal-code" target="_blank" rel="noopener noreferrer" class="grow">Postal Code</a> is a web application that shows your postal code based on your current location.
+            <a href="https://leonardogalante.com/postal-code" target="_blank" rel="noopener noreferrer">Postal Code</a> is a web application that shows your postal code based on your current location.
           </p>
         </section>
 
         <!-- References -->
         <section>
-          <h2>&lt;References /&gt;</h2>
+          <h2>references</h2>
+
           <blockquote>
             <p>Leo is undoubtedly an exceptional person. Not only he is extremely capable in the professional aspect, but above
               all he is an outstanding human being, always worried about helping others and infusing a great energy into
@@ -292,40 +307,40 @@
 
         <!-- Miscellaneous -->
         <section>
-          <h2>&lt;Miscellaneous /&gt;</h2>
+          <h2>miscellaneous</h2>
 
           <div class="miscellaneous">
             <div>
               👨🏻‍🚀
-              <a href="https://auth0.com/ambassador-program" target="_blank" rel="noopener noreferrer" class="grow">Auth0 ambassador</a>
+              <a href="https://auth0.com/ambassador-program" target="_blank" rel="noopener noreferrer">Auth0 ambassador</a>
             </div>
             <div>
               🥋
-              <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer" class="grow">Codewars katas</a>
+              <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">Codewars katas</a>
             </div>
             <div>
               📚
-              <a href="https://github.com/lndgalante/reads" target="_blank" rel="noopener noreferrer" class="grow">Books n' guides</a>
+              <a href="https://github.com/lndgalante/reads" target="_blank" rel="noopener noreferrer">Books n' guides</a>
             </div>
             <div>
               🛠
-              <a href="https://github.com/lndgalante/tools-configuration" target="_blank" rel="noopener noreferrer" class="grow">Tools n' configs</a>
+              <a href="https://github.com/lndgalante/tools-configuration" target="_blank" rel="noopener noreferrer">Tools n' configs</a>
             </div>
             <div>
               🎥
-              <a href="https://github.com/lndgalante/events-assisted" target="_blank" rel="noopener noreferrer" class="grow">Events assisted</a>
+              <a href="https://github.com/lndgalante/events-assisted" target="_blank" rel="noopener noreferrer">Events assisted</a>
             </div>
             <div>
               🏁
-              <a href="https://github.com/lndgalante/personal-goals" target="_blank" rel="noopener noreferrer" class="grow">Personal goals</a>
+              <a href="https://github.com/lndgalante/personal-goals" target="_blank" rel="noopener noreferrer">Personal goals</a>
             </div>
             <div>
               👩‍🏫
-              <a href="https://github.com/lndgalante/courses-list" target="_blank" rel="noopener noreferrer" class="grow">Courses list</a>
+              <a href="https://github.com/lndgalante/courses-list" target="_blank" rel="noopener noreferrer">Courses list</a>
             </div>
             <div>
-              🐙
-              <a href="https://github.com/lndgalante/lndgalante.github.io" target="_blank" rel="noopener noreferrer" class="grow">Website code</a>
+              🕸
+              <a href="https://github.com/lndgalante/lndgalante.github.io" target="_blank" rel="noopener noreferrer">Website code</a>
             </div>
           </div>
         </section>
