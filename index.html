@@ -44,287 +44,50 @@
   <meta name="fb:admins" content="https://www.facebook.com/lndgalante">
   <meta name="og:type" content="website">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
-
-  <!-- General Styles -->
-  <style>
-    :root {
-      --white: #ffffff;
-      --black: #111111;
-      --silver: #f1f3f5;
-      --violet: #4e54c8;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      overflow-x: hidden;
-      color: var(--white);
-      text-rendering: optimizeLegibility;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      font-family: 'Rubik', sans-serif;
-    }
-
-    main {
-      width: 100vw;
-      min-height: 100vh;
-      padding-bottom: 3em;
-    }
-
-    .title,
-    .social-link {
-      display: flex;
-      align-items: center;
-    }
-
-    .container {
-      height: 100%;
-      margin: 0 auto;
-      max-width: 940px;
-      padding: 0 1.2em;
-    }
-
-    header {
-      height: 90px;
-    }
-
-    header>.container {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-auto-flow: column;
-      grid-gap: 20px;
-      padding: 0 1.2em;
-    }
-
-    h1 {
-      line-height: 1.2;
-      display: inline-block;
-      font-size: 1.25rem;
-      font-weight: 300;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--violet);
-    }
-
-    h2 {
-      color: var(--silver);
-      font-size: 1.4rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      margin-bottom: 0.8em;
-      text-transform: uppercase;
-    }
-
-    p {
-      margin-bottom: 0.1em;
-    }
-
-    section {
-      font-size: 1.18rem;
-      margin: 1.2em 0 2.4em;
-      border-radius: 4px;
-      padding: 1.4em;
-      background: linear-gradient(141deg, rgba(78, 84, 200, 0.9) 0%, rgba(143, 148, 251, 0.9) 100%);
-      box-shadow: 0 6px 8px 0 rgba(164, 164, 164, .21)
-    }
-
-    blockquote,
-    section:last-child {
-      font-size: 1.1rem;
-    }
-
-    blockquote {
-      display: block;
-      padding-left: 0.8em;
-      border-left: 2px solid var(--silver);
-    }
-
-    blockquote:last-child {
-      margin-top: 0.8em;
-    }
-
-    blockquote>footer {
-      font-style: normal;
-      margin-top: 0.4em;
-      padding: 0;
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--silver);
-    }
-
-    a {
-      color: var(--white);
-      font-weight: 500;
-      text-decoration: none;
-      opacity: 1;
-      -webkit-transition: opacity .15s ease-out;
-      transition: opacity .15s ease-out;
-    }
-
-    a:hover {
-      opacity: .8;
-    }
-
-    svg {
-      width: 20px;
-      stroke-width: 1.3;
-      stroke: var(--violet);
-      transition: all 300ms ease-in-out;
-      will-change: transform;
-    }
-
-    a:hover svg {
-      transform: scale(1.2);
-    }
-
-    .emoji {
-      width: 28px;
-      margin-right: 6px;
-    }
-
-    .miscellaneous {
-      display: grid;
-      grid-gap: 10px;
-      grid-auto-rows: 45px;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .miscellaneous>div {
-      display: flex;
-      align-items: center;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 </head>
 
 <body>
-  <main>
-    <!-- Header -->
-    <header>
+  <section class="hero has-background-black is-fullheight">
+    <div class="hero-body">
       <div class="container">
-        <h1 class="title">Leonardo Galante</h1>
-
-        <!-- GitHub -->
-        <a href="https://github.com/lndgalante" target="_blank" rel="noopener noreferrer" class="social-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" aria-labelledby="github" role="img">
-            <title id="github">GitHub</title>
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-        </a>
-
-        <!-- Twitter -->
-        <a href="https://twitter.com/lndgalante" target="_blank" rel="noopener noreferrer" class="social-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" role="img" aria-labelledby="twitter">
-            <title id="twitter">Twitter</title>
-            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-          </svg>
-        </a>
-
-        <!-- Gmail -->
-        <a href="mailto:lndgalante@gmail.com" rel="noopener noreferrer" class="social-link">
-
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" class="feather feather-send" aria-labelledby="gmail" role="img">
-            <title id="gmail">Gmail</title>
-            <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-        </a>
-
-        <!-- Medium -->
-        <a href="https://medium.com/@lndgalante" target="_blank" rel="noopener noreferrer" class="social-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2" aria-labelledby="medium" role="img">
-            <title id="medium">Medium</title>
-            <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
-          </svg>
-        </a>
+        <h1 class="title has-text-white is-3">Leonardo Galante</h1>
+        <h2 class="subtitle has-text-light is-4">Frontend Developer &amp; Mentor</h2>
+        <div class="has-text-grey-light">
+          <p>Developing solutions with React at
+            <a class="has-text-info" href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer">MercadoLibre</a>
+          </p>
+          <p>Mentoring about web development at
+            <a class="has-text-info" href="https://careerfoundry.com" target="_blank" rel="noopener noreferrer">CareerFoundry</a>
+          </p>
+          <p>Co-organizing events such as
+            <a class="has-text-info" href="https://freecodecampba.org" target="_blank" rel="noopener noreferrer">freeCodeCampBA</a> /
+            <a class="has-text-info" href="https://javascript-101.github.io" target="_blank" rel="noopener noreferrer">JS101</a>
+          </p>
+        </div>
       </div>
-    </header>
-
-    <!-- Content -->
-    <article>
-      <div class="container">
-        <!-- About -->
-        <section>
-          <h2>about</h2>
-
-          <p>I'm a JavaScript developer based in Buenos Aires working with React/Redux at
-            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer">MercadoLibre</a>.</p>
-          <p>Mentoring about web development to students online from around the globe at
-            <a href="https://careerfoundry.com" target="_blank" rel="noopener noreferrer">CareerFoundry</a>.</p>
-          <p>Organising
-            <a href="https://freecodecampba.org" target="_blank" rel="noopener noreferrer">freeCodeCampBA</a> community and
-            <a href="https://javascript-101.github.io" target="_blank" rel="noopener noreferrer">JS101</a> free workshops with some lovely people.</p>
-          <p>I'm also an
-            <a href="https://auth0.com/ambassador-program" target="_blank" rel="noopener noreferrer">Auth0 ambassador</a> which allows me to improve and grow the community and events.</p>
-        </section>
-
-        <!-- Projects -->
-        <section>
-          <h2>projects</h2>
-
-          <p>
-            <a href="#" rel="noopener noreferrer">DondeBA</a> (WIP) an iOS app to easily know the route of any bus and its stops from Buenos Aires.
-          </p>
-          <p>
-            <a href="https://chrome.google.com/webstore/detail/mercadolibre-m%C3%A1s-vendidos/ecmfdhafogloeacbceakgefanbkocdhk" target="_blank"
-              rel="noopener noreferrer">Más Vendidos</a> a Chrome extension that sorts all the products from MercadoLibre by units sold.
-          </p>
-          <p>
-            <a href="https://archillect-api.now.sh/visuals" target="_blank" rel="noopener noreferrer">Archillect API</a> an unofficial API scrapper that retrieves a list of amazing images from Archillect.
-          </p>
-          <p>
-            <a href="https://leonardogalante.com/postal-code" target="_blank" rel="noopener noreferrer">Postal Code</a> is a simple web app that shows your postal code based on your current location.
-          </p>
-        </section>
-
-        <!-- Miscellaneous -->
-        <section>
-          <h2>miscellaneous</h2>
-
-          <div class="miscellaneous">
-            <div>
-              🥋
-              <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">Codewars katas</a>
-            </div>
-            <div>
-              📚
-              <a href="https://github.com/lndgalante/reads" target="_blank" rel="noopener noreferrer">Books n' guides</a>
-            </div>
-            <div>
-              🛠
-              <a href="https://github.com/lndgalante/tools-configuration" target="_blank" rel="noopener noreferrer">Tools n' configs</a>
-            </div>
-            <div>
-              🎥
-              <a href="https://github.com/lndgalante/events-assisted" target="_blank" rel="noopener noreferrer">Events assisted</a>
-            </div>
-            <div>
-              🏁
-              <a href="https://github.com/lndgalante/personal-goals" target="_blank" rel="noopener noreferrer">Personal goals</a>
-            </div>
-            <div>
-              👩‍🏫
-              <a href="https://github.com/lndgalante/courses-list" target="_blank" rel="noopener noreferrer">Courses list</a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </article>
-  </main>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.5.0/2/twemoji.min.js"></script>
-  <script>twemoji.parse(document.body, { folder: 'svg', ext: '.svg' })</script>
+    </div>
+    <div class="hero-foot">
+      <nav class="tabs">
+        <div class="container">
+          <ul>
+            <li>
+              <a class="has-text-grey-light" href="https://medium.com/@lndgalante" target="_blank" rel="noopener noreferrer">Medium</a>
+            </li>
+            <li>
+              <a class="has-text-grey-light" href="https://github.com/lndgalante" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+            <li>
+              <a class="has-text-grey-light" href="https://twitter.com/lndgalante" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </li>
+            <li>
+              <a class="has-text-grey-light" href="mailto:lndgalante@gmail.com" rel="noopener noreferrer">Email</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
 </body>
 
 </html>
