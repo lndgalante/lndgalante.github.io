@@ -44,32 +44,56 @@
   <meta name="fb:admins" content="https://www.facebook.com/lndgalante">
   <meta name="og:type" content="website">
 
+  <!-- Bulma -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+
+  <!-- Custom Styling -->
+  <style>
+    .emoji {
+      width: 28px;
+      margin-right: 6px;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+    }
+
+    .image {
+      margin-bottom: 0.6rem;
+    }
+
+    .box .title {
+      margin-bottom: 1.6rem;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- About -->
   <section class="hero is-fullheight">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title is-3">Leonardo Galante</h1>
-        <h2 class="subtitle is-4">Frontend Developer &amp; Mentor</h2>
-        <div>
-          <p>Developing solutions with React at
+        <h1 class="title is-2">Leonardo Galante</h1>
+        <h2 class="subtitle is-3">Frontend Developer &amp; Mentor</h2>
+        <div class="is-size-5">
+          <p>Currently developing solutions with React and Redux at
             <a class="has-text-info has-text-weight-semibold" href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer">MercadoLibre</a>
           </p>
-          <p>Co-organizing
-            <a class="has-text-info has-text-weight-semibold" href="https://freecodecampba.org" target="_blank" rel="noopener noreferrer">freeCodeCampBA</a> &amp;
-            <a class="has-text-info has-text-weight-semibold" href="https://javascript-101.github.io" target="_blank" rel="noopener noreferrer">JavaScript101</a>
-          </p>
           <p>Mentoring about web development at
-            <a class="has-text-info has-text-weight-semibold" href="https://careerfoundry.com" target="_blank" rel="noopener noreferrer">CareerFoundry</a>
-          </p>
-          <p>Teaching at my small academy called
+            <a class="has-text-info has-text-weight-semibold" href="https://careerfoundry.com" target="_blank" rel="noopener noreferrer">CareerFoundry</a> and
             <a class="has-text-info has-text-weight-semibold" href="https://switch-academy.io" target="_blank" rel="noopener noreferrer">Switch Academy</a>
           </p>
+          <p>Co-organizing
+            <a class="has-text-info has-text-weight-semibold" href="https://freecodecampba.org" target="_blank" rel="noopener noreferrer">freeCodeCampBA</a> community and
+            <a class="has-text-info has-text-weight-semibold" href="https://javascript-101.github.io" target="_blank" rel="noopener noreferrer">JavaScript101</a> workshops
+          </p>
+        </div>
+        <div class="buttons">
+          <button class="button is-info is-large call-to-action">💡Projects</button>
         </div>
       </div>
     </div>
+    <!-- Footer -->
     <div class="hero-foot">
       <nav class="tabs">
         <div class="container">
@@ -91,6 +115,73 @@
       </nav>
     </div>
   </section>
+
+  <!-- Projects -->
+  <section class="hero is-fullheight projects">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Projects</h2>
+        <div class="columns">
+          <!-- Más Vendidos -->
+          <div class="column is-mobile is-half-tablet is-one-third-desktop">
+            <a href="https://github.com/lndgalante/mas-vendidos" target="_blank" rel="noopener noreferrer">
+              <div class="box">
+                <figure class="image">
+                  <img src="/assets/MercadoLibre.png">
+                </figure>
+                <h2 class="title is-4">
+                  <span>Más Vendidos</span>
+                  <span class="tag is-small">Chrome</span>
+                </h2>
+                <p class="subtitle is-7">Sorts all the products from MercadoLibre by units sold</p>
+              </div>
+            </a>
+          </div>
+          <!-- Arpillect -->
+          <div class="column is-mobile is-half-tablet is-one-third-desktop">
+            <a href="https://github.com/lndgalante/archillect-unoffcial-api" target="_blank" rel="noopener noreferrer">
+              <div class="box">
+                <figure class="image">
+                  <img src="/assets/Archillect.png">
+                </figure>
+                <h2 class="title is-4">
+                  <span>Arpillect</span>
+                  <span class="tag is-small">API</span>
+                </h2>
+                <p class="subtitle is-7">Get a list of amazing visuals from Archillect</p>
+              </div>
+            </a>
+          </div>
+          <!-- CodeWars Katas -->
+          <div class="column is-mobile is-half-tablet is-one-third-desktop">
+            <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">
+              <div class="box">
+                <figure class="image">
+                  <img src="/assets/CodeWars.png">
+                </figure>
+                <h2 class="title is-4">
+                  <span>CodeWars Katas</span>
+                  <span class="tag is-small">Algorithms</span>
+                </h2>
+                <p class="subtitle is-7">An ark of solved katas with test integration</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Twemoji -->
+  <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?11.0"></script>
+  <script>
+    const callToAction = document.querySelector('.call-to-action')
+    const projectsSection = document.querySelector('.projects')
+
+    callToAction.addEventListener('click', () => projectsSection.scrollIntoView({ behavior: 'smooth' }))
+    twemoji.parse(document.body)
+  </script>
 </body>
 
 </html>
