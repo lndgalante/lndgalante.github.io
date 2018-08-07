@@ -85,6 +85,21 @@
       stroke: #363636;
       margin-right: 0.6rem;
     }
+
+    .image {
+      overflow: hidden;
+    }
+
+    .image img {
+      height: 182px;
+      object-fit: cover;
+      object-position: center;
+      transition: all 500ms ease-in-out;
+    }
+
+    .box:hover .image img {
+      transform: scale(1.5)
+    }
   </style>
 </head>
 
@@ -149,6 +164,7 @@
       <div class="container">
         <h2 class="title is-3">Projects</h2>
         <div class="columns">
+
           <!-- Más Vendidos -->
           <div class="column is-mobile is-half-tablet is-one-third-desktop">
             <a href="https://github.com/lndgalante/mas-vendidos" target="_blank" rel="noopener noreferrer">
@@ -164,12 +180,13 @@
               </div>
             </a>
           </div>
+
           <!-- Arpillect -->
           <div class="column is-mobile is-half-tablet is-one-third-desktop">
             <a href="https://github.com/lndgalante/archillect-unoffcial-api" target="_blank" rel="noopener noreferrer">
               <div class="box">
                 <figure class="image">
-                  <img src="/assets/Archillect.png">
+                  <img class="archillect">
                 </figure>
                 <h2 class="title is-3">
                   <span>Arpillect</span>
@@ -179,6 +196,7 @@
               </div>
             </a>
           </div>
+
           <!-- Codewars Katas -->
           <div class="column is-mobile is-half-tablet is-one-third-desktop">
             <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">
@@ -206,8 +224,16 @@
     const callToAction = document.querySelector('.call-to-action')
     const projectsSection = document.querySelector('.projects')
 
-    callToAction.addEventListener('click', () => projectsSection.scrollIntoView({ behavior: 'smooth' }))
+    callToAction.addEventListener('click', () =>
+      projectsSection.scrollIntoView({ behavior: 'smooth' })
+    )
     twemoji.parse(document.body)
+
+    fetch('https://archillect-api.now.sh/random')
+      .then(res => res.json())
+      .then(data => {
+        document.querySelector('.archillect').setAttribute('src', data.imageSource)
+      })
   </script>
 </body>
 
