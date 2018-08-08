@@ -3,8 +3,9 @@
 
 <head>
   <!-- Responsiveness -->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
@@ -16,8 +17,7 @@
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- Common Tags -->
-  <meta charset="utf-8">
+  <!-- Title -->
   <title>Leonardo Galante</title>
 
   <!-- Search Engine -->
@@ -257,15 +257,11 @@
     const callToAction = document.querySelector('.call-to-action')
     const projectsSection = document.querySelector('.projects')
 
-    callToAction.addEventListener('click', () =>
-      projectsSection.scrollIntoView({ behavior: 'smooth' })
-    )
+    callToAction.addEventListener('click', () => projectsSection.scrollIntoView({ behavior: 'smooth' }))
 
     fetch('https://archillect-api.now.sh/random')
       .then(res => res.json())
-      .then(data => {
-        document.querySelector('.archillect').setAttribute('src', data.imageSource)
-      })
+      .then(data => document.querySelector('.archillect').setAttribute('src', data.imageSource))
   </script>
 </body>
 
