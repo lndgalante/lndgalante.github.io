@@ -156,7 +156,7 @@
             <a href="https://github.com/lndgalante/mas-vendidos" target="_blank" rel="noopener noreferrer">
               <div class="box">
                 <figure class="image">
-                  <img src="/assets/MercadoLibre.png" alt="MercadoLibre">
+                  <img src="/assets/mercadolibre.webp" alt="MercadoLibre">
                 </figure>
                 <h2 class="title is-3">
                   <span>Más Vendidos</span>
@@ -172,7 +172,7 @@
             <a href="https://github.com/lndgalante/archillect-unoffcial-api" target="_blank" rel="noopener noreferrer">
               <div class="box">
                 <figure class="image">
-                  <img class="archillect" alt="Archillect">
+                  <img src="/assets/archillect.webp" alt="Archillect">
                 </figure>
                 <h2 class="title is-3">
                   <span>Arpillect</span>
@@ -188,7 +188,7 @@
             <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">
               <div class="box">
                 <figure class="image">
-                  <img src="/assets/CodeWars.png" alt="Codewars">
+                  <img src="/assets/codewars.webp" alt="Codewars">
                 </figure>
                 <h2 class="title is-3">
                   <span>Codewars Katas</span>
@@ -258,10 +258,6 @@
     const projectsSection = document.querySelector('.projects')
 
     callToAction.addEventListener('click', () => projectsSection.scrollIntoView({ behavior: 'smooth' }))
-
-    fetch('https://archillect-api.now.sh/random')
-      .then(res => res.json())
-      .then(data => document.querySelector('.archillect').setAttribute('src', data.imageSource))
   </script>
 </body>
 
