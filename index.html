@@ -102,6 +102,10 @@
       transition: all 500ms ease-in-out;
     }
 
+    .image img[alt="DondeBA"] {
+      object-position: top;
+    }
+
     .box:hover .image img {
       transform: scale(1.5);
     }
@@ -148,59 +152,142 @@
   </section>
 
   <!-- Projects -->
-  <section class="hero is-fullheight projects">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Projects</h2>
-        <h3 class="subtitle is-4">Ping me for a private portfolio</h3>
-        <div class="columns">
-          <!-- Más Vendidos -->
-          <div class="column is-mobile is-half-tablet is-one-third-desktop">
-            <a href="https://github.com/lndgalante/mas-vendidos" target="_blank" rel="noopener noreferrer">
-              <div class="box">
-                <figure class="image">
-                  <img src="/assets/mercadolibre.webp" alt="MercadoLibre">
-                </figure>
-                <h2 class="title is-3">
-                  <span>Más Vendidos</span>
-                  <span class="tag is-small">Chrome</span>
-                </h2>
-                <p class="subtitle is-6">Sorts MercadoLibre items by units sold</p>
-              </div>
-            </a>
-          </div>
+  <section class="section is-medium projects">
+    <div class="container">
+      <h2 class="title is-3">Projects</h2>
+      <h3 class="subtitle is-4">Ping me for a private portfolio</h3>
+      <div class="columns">
+        <!-- DondeBA -->
+        <div class="column is-mobile is-half-tablet is-one-third-desktop">
+          <a href="https://github.com/lndgalante/DondeBA" target="_blank" rel="noopener noreferrer">
+            <div class="box">
+              <figure class="image">
+                <img src="/assets/dondeba.webp" alt="DondeBA">
+              </figure>
+              <h2 class="title is-3">
+                <span>DondeBA</span>
+                <span class="tag is-small">iOS</span>
+              </h2>
+              <p class="subtitle is-6">Know the route of any bus in Buenos Aires</p>
+            </div>
+          </a>
+        </div>
 
-          <!-- Arpillect -->
-          <div class="column is-mobile is-half-tablet is-one-third-desktop">
-            <a href="https://github.com/lndgalante/arpillect" target="_blank" rel="noopener noreferrer">
-              <div class="box">
-                <figure class="image">
-                  <img src="/assets/archillect.webp" alt="Archillect">
-                </figure>
-                <h2 class="title is-3">
-                  <span>Arpillect</span>
-                  <span class="tag is-small">API</span>
-                </h2>
-                <p class="subtitle is-6">Get a list of amazing visuals from Archillect</p>
-              </div>
-            </a>
-          </div>
+        <!-- Más Vendidos -->
+        <div class="column is-mobile is-half-tablet is-one-third-desktop">
+          <a href="https://github.com/lndgalante/mas-vendidos" target="_blank" rel="noopener noreferrer">
+            <div class="box">
+              <figure class="image">
+                <img src="/assets/mercadolibre.webp" alt="MercadoLibre">
+              </figure>
+              <h2 class="title is-3">
+                <span>Más Vendidos</span>
+                <span class="tag is-small">Chrome</span>
+              </h2>
+              <p class="subtitle is-6">Sorts MercadoLibre items by units sold</p>
+            </div>
+          </a>
+        </div>
 
-          <!-- Codewars Katas -->
-          <div class="column is-mobile is-half-tablet is-one-third-desktop">
-            <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">
-              <div class="box">
-                <figure class="image">
-                  <img src="/assets/codewars.webp" alt="Codewars">
-                </figure>
-                <h2 class="title is-3">
-                  <span>Codewars Katas</span>
-                  <span class="tag is-small">Algorithms</span>
-                </h2>
-                <p class="subtitle is-6">An ark of solved katas with test integration</p>
+        <!-- Arpillect -->
+        <div class="column is-mobile is-half-tablet is-one-third-desktop">
+          <a href="https://github.com/lndgalante/arpillect" target="_blank" rel="noopener noreferrer">
+            <div class="box">
+              <figure class="image">
+                <img src="/assets/archillect.webp" alt="Archillect">
+              </figure>
+              <h2 class="title is-3">
+                <span>Arpillect</span>
+                <span class="tag is-small">API</span>
+              </h2>
+              <p class="subtitle is-6">Get a list of amazing visuals from Archillect</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Miscellaneous -->
+  <section class="section is-medium">
+    <div class="container">
+      <h2 class="title is-3">Miscellaneous</h2>
+      <h3 class="subtitle is-4">Random but awesome stuff</h3>
+      <div class="columns">
+        <div class="column">
+          <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">
+            <article class="message is-info">
+              <div class="message-header">
+                <p>🥋 Codewars Katas</p>
               </div>
-            </a>
-          </div>
+              <div class="message-body">
+                An ark of solved katas with test integration
+              </div>
+            </article>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://github.com/lndgalante/tools-configuration" target="_blank" rel="noopener noreferrer">
+            <article class="message is-info">
+              <div class="message-header">
+                <p>💾 Tools Configuration</p>
+              </div>
+              <div class="message-body">
+                My personal configuration files
+              </div>
+            </article>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://github.com/lndgalante/personal-goals" target="_blank" rel="noopener noreferrer">
+            <article class="message is-info">
+              <div class="message-header">
+                <p>🏁 Personal goals</p>
+              </div>
+              <div class="message-body">
+                Goals to keep walking the walk
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <a href="https://github.com/lndgalante/courses-list" target="_blank" rel="noopener noreferrer">
+            <article class="message is-info">
+              <div class="message-header">
+                <p>👨‍🎓 Courses List</p>
+              </div>
+              <div class="message-body">
+                A list of web development courses
+              </div>
+            </article>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://github.com/lndgalante/reads" target="_blank" rel="noopener noreferrer">
+            <article class="message is-info">
+              <div class="message-header">
+                <p>📚 Books and Guides</p>
+              </div>
+              <div class="message-body">
+                A list of physical books I recommend
+              </div>
+            </article>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://github.com/lndgalante/events-assisted" target="_blank" rel="noopener noreferrer">
+            <article class="message is-info">
+              <div class="message-header">
+                <p>👨‍🏫 Events Assisted</p>
+              </div>
+              <div class="message-body">
+                A list of conferences and meetups I assisted
+              </div>
+            </article>
+          </a>
         </div>
       </div>
     </div>
