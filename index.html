@@ -43,14 +43,6 @@
     <meta name="fb:admins" content="https://www.facebook.com/lndgalante" />
     <meta name="og:type" content="website" />
 
-    <!-- Bulma through cdnjs -->
-    <link
-      as="style"
-      rel="preload"
-      onload="this.rel='stylesheet'"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
-    />
-
     <!-- Custom styles -->
     <style>
       .buttons {
@@ -457,27 +449,22 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.3.6/baffle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/loadCSS/2.0.1/loadCSS.min.js"></script>
     <script>
+      const title = document.querySelector('h1.title')
+      const subtitle = document.querySelector('h2.subtitle')
       const callToAction = document.querySelector('.call-to-action')
       const projectsSection = document.querySelector('.projects')
 
-      baffle(document.querySelector('h1.title')).reveal(1000)
-      baffle(document.querySelector('h2.subtitle')).reveal(1500)
-      callToAction.addEventListener('click', () => projectsSection.scrollIntoView({ behavior: 'smooth' }))
+      // Load bulma async
+      loadCSS('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css')
 
-      const loadStyles = () => {
-        const cb = function() {
-          const l = document.createElement('link')
-          l.rel = 'stylesheet'
-          l.href = 'css/style.css'
-          const h = document.getElementsByTagName('head')[0]
-          h.parentNode.insertBefore(l, h)
-        }
-        const raf =
-          requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame
-        if (raf) raf(cb)
-        else window.addEventListener('load', cb)
-      }
+      // Add effects
+      baffle(title).reveal(1000)
+      baffle(subtitle).reveal(1200)
+
+      // Scroll into project sections for call to action
+      callToAction.addEventListener('click', () => projectsSection.scrollIntoView({ behavior: 'smooth' }))
     </script>
   </body>
 </html>
