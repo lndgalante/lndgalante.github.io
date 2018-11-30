@@ -44,7 +44,12 @@
     <meta name="og:type" content="website" />
 
     <!-- Bulma through cdnjs -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link
+      as="style"
+      rel="preload"
+      onload="this.rel='stylesheet'"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+    />
 
     <!-- Custom styles -->
     <style>
@@ -459,6 +464,20 @@
       baffle(document.querySelector('h1.title')).reveal(1000)
       baffle(document.querySelector('h2.subtitle')).reveal(1500)
       callToAction.addEventListener('click', () => projectsSection.scrollIntoView({ behavior: 'smooth' }))
+
+      const loadStyles = () => {
+        const cb = function() {
+          const l = document.createElement('link')
+          l.rel = 'stylesheet'
+          l.href = 'css/style.css'
+          const h = document.getElementsByTagName('head')[0]
+          h.parentNode.insertBefore(l, h)
+        }
+        const raf =
+          requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame
+        if (raf) raf(cb)
+        else window.addEventListener('load', cb)
+      }
     </script>
   </body>
 </html>
