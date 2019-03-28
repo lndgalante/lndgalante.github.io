@@ -379,14 +379,14 @@
           </g>
         </svg>
 
-        <h2><span>Projects</span></h2>
-        <article>
+        <h2 class="lax" data-lax-preset="rightToLeft-.02 fadeInOut"><span>Projects</span></h2>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a href="https://estrenos.now.sh" target="_blank" rel="noopener noreferrer">
             <h3>Cinemark estrenos &middot; React & Express</h3>
             <p>Watch the latest Cinemark premieres</p>
           </a>
         </article>
-        <article>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a
             href="https://chrome.google.com/webstore/detail/mercadolibre-m%C3%A1s-vendidos/ecmfdhafogloeacbceakgefanbkocdhk"
             target="_blank"
@@ -396,7 +396,7 @@
             <p>Sorts MercadoLibre items by units sold</p>
           </a>
         </article>
-        <article>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a
             href="https://marketplace.visualstudio.com/items?itemName=lndgalante0765.regex-share"
             target="_blank"
@@ -420,8 +420,8 @@
           </g>
         </svg>
 
-        <h2><span>Writings</span></h2>
-        <article>
+        <h2 class="lax" data-lax-preset="rightToLeft-.02 fadeInOut"><span>Writings</span></h2>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a
             href="https://meetupjs.com.ar/articulos/resena-meetup-noviembre-2018.html"
             target="_blank"
@@ -431,7 +431,7 @@
             <p>Summary of the 50th event of Meetup.js</p>
           </a>
         </article>
-        <article>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a
             href="https://lightning-estrenos.now.sh/assets/player/KeynoteDHTMLPlayer"
             target="_blank"
@@ -441,7 +441,7 @@
             <p>How to improve the UI/UX of an existing product</p>
           </a>
         </article>
-        <article>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a
             href="https://medium.com/@lndgalante/soft-skills-parte-1-carrera-55d656cb95c3"
             target="_blank"
@@ -465,20 +465,20 @@
           </g>
         </svg>
 
-        <h2><span>Goodies</span></h2>
-        <article>
+        <h2 class="lax" data-lax-preset="rightToLeft-.02 fadeInOut"><span>Goodies</span></h2>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">
             <h3>Codewars Katas</h3>
             <p>Algorithmic solutions with tests integration</p>
           </a>
         </article>
-        <article>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a href="https://github.com/lndgalante/courses-list" target="_blank" rel="noopener noreferrer">
             <h3>Courses List</h3>
             <p>Tons of free and paid web development courses</p>
           </a>
         </article>
-        <article>
+        <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a href="https://github.com/lndgalante/reads" target="_blank" rel="noopener noreferrer">
             <h3>Reads</h3>
             <p>Recommended books, style guides and conferences</p>
@@ -549,5 +549,19 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/lax.js@1.2.0/lib/lax.min.js"></script>
+    <script>
+      window.onload = function() {
+        lax.setup() // init
+
+        const updateLax = () => {
+          lax.update(window.scrollY)
+          window.requestAnimationFrame(updateLax)
+        }
+
+        window.requestAnimationFrame(updateLax)
+      }
+    </script>
   </body>
 </html>
