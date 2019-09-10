@@ -205,17 +205,29 @@
       }
 
       .social {
-        display: grid;
         width: 100%;
-        max-width: 90px;
-        padding: 16px 0;
-        grid-gap: 16px;
-        grid-auto-flow: column;
+        display: flex;
+        align-items: center;
       }
 
-      .social svg {
-        width: 22px;
-        stroke-width: 1px;
+      .social a {
+        width: 24px;
+      }
+
+      .social a ~ a {
+        margin-left: 12px;
+      }
+
+      .social .anim-icon-github {
+        width: 18px;
+      }
+
+      .social .anim-icon-twitter {
+        margin-top: 2px;
+      }
+
+      .social .anim-icon-mail {
+        margin-top: 4px;
       }
 
       .social svg path,
@@ -309,61 +321,29 @@
         </p>
 
         <div class="social">
-          <a href="https://github.com/lndgalante" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-github"
-            >
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-              ></path>
-            </svg>
-          </a>
-
-          <a href="https://twitter.com/lndgalante" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-twitter"
-            >
-              <path
-                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-              ></path>
-            </svg>
-          </a>
-
-          <a href="mailto:lndgalante@gmail.com" aria-label="Gmail" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-send"
-            >
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-          </a>
+          <a
+            href="https://github.com/lndgalante"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-github"
+            data-animation="github"
+          ></a>
+          <a
+            href="https://twitter.com/lndgalante"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-twitter"
+            data-animation="twitter"
+          ></a>
+          <a
+            href="mailto:lndgalante@gmail.com"
+            aria-label="Gmail"
+            rel="noopener noreferrer"
+            class="anim-icon-mail"
+            data-animation="mail"
+          ></a>
         </div>
       </div>
     </main>
@@ -491,77 +471,85 @@
       <div class="container">
         <p>Leonardo Galante &copy; 2019</p>
         <div class="social">
-          <a href="https://github.com/lndgalante" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-github"
-            >
-              <path
-                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-              ></path>
-            </svg>
-          </a>
-
-          <a href="https://twitter.com/lndgalante" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-twitter"
-            >
-              <path
-                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-              ></path>
-            </svg>
-          </a>
-
-          <a href="mailto:lndgalante@gmail.com" aria-label="Gmail" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-send"
-            >
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-          </a>
+          <a
+            href="https://github.com/lndgalante"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-github"
+            data-animation="github"
+          ></a>
+          <a
+            href="https://twitter.com/lndgalante"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-twitter"
+            data-animation="twitter"
+          ></a>
+          <a
+            href="mailto:lndgalante@gmail.com"
+            aria-label="Gmail"
+            rel="noopener noreferrer"
+            class="anim-icon-mail"
+            data-animation="mail"
+          ></a>
         </div>
       </div>
     </footer>
 
     <script src="https://unpkg.com/lax.js@1.2.3/lib/lax.min.js"></script>
+    <script src="https://unpkg.com/lottie-web@5.5.8/build/player/lottie.js"></script>
     <script>
-      window.onload = function() {
-        lax.setup()
+      function main() {
+        /* Lax */
+        lax.setup();
 
         const updateLax = () => {
-          lax.update(window.scrollY)
-          window.requestAnimationFrame(updateLax)
-        }
+          lax.update(window.scrollY);
+          window.requestAnimationFrame(updateLax);
+        };
 
-        window.requestAnimationFrame(updateLax)
+        window.requestAnimationFrame(updateLax);
+
+        /* useAnimations */
+        const iconGithub = document.querySelector('.anim-icon-github');
+
+        const iconPrefix = 'anim-icon';
+        const icons = [
+          ...document.querySelectorAll(`.${iconPrefix}-github`),
+          ...document.querySelectorAll(`.${iconPrefix}-twitter`),
+          ...document.querySelectorAll(`.${iconPrefix}-mail`),
+        ];
+
+        icons.forEach(icon => {
+          const animationName = icon.getAttribute('data-animation');
+
+          const animation = lottie.loadAnimation({
+            renderer: 'svg',
+            container: icon,
+            autoplay: false,
+            loop: animationName !== 'mail',
+            path: `animations/${animationName}.json`,
+          });
+          animation.setSpeed(1);
+
+          const direction = 1;
+          icon.addEventListener('mouseenter', () => {
+            animation.setDirection(direction);
+            animation.play();
+          });
+
+          icon.addEventListener('mouseleave', () => {
+            if (animationName !== 'mail') return animation.stop();
+
+            animation.setDirection(-direction);
+            animation.play();
+          });
+        });
       }
+
+      document.addEventListener('DOMContentLoaded', main);
     </script>
   </body>
 </html>
