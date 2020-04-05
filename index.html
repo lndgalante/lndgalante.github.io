@@ -244,11 +244,12 @@
         margin-bottom: 2px;
       }
 
-      .social .anim-icon-mail {
+      .social .anim-icon-mail, .anim-icon-scroll-down {
         width: 32px;
       }
 
-      .social svg path {
+      .social svg path,
+      .anim-icon-scroll-down svg path {
         stroke: var(--light-grey);
       }
 
@@ -493,9 +494,9 @@
       </div>
 
       <div class="mouse_scroll">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
+        <div
+        class="anim-icon-scroll-down"
+        data-animation="scroll-down" ></div>
       </div>
     </main>
 
@@ -684,7 +685,7 @@
     </footer>
 
     <script src="https://unpkg.com/lax.js@1.2.5/lib/lax.min.js"></script>
-    <script src="https://unpkg.com/lottie-web@5.5.8/build/player/lottie.js"></script>
+    <script src="https://unpkg.com/lottie-web@5.6.7/build/player/lottie.js"></script>
     <script>
       function main() {
         /* Lax */
@@ -705,9 +706,11 @@
           ...document.querySelectorAll(`.${iconPrefix}-github`),
           ...document.querySelectorAll(`.${iconPrefix}-twitter`),
           ...document.querySelectorAll(`.${iconPrefix}-mail`),
+          ...document.querySelectorAll(`.${iconPrefix}-scroll-down`),
         ]
 
         icons.forEach(icon => {
+          const direction = 1
           const animationName = icon.getAttribute('data-animation')
 
           const animation = lottie.loadAnimation({
@@ -717,9 +720,13 @@
             loop: animationName !== 'mail',
             path: `animations/${animationName}.json`,
           })
+
           animation.setSpeed(1)
 
-          const direction = 1
+          if (animationName === 'scroll-down') {
+            animation.play()
+          }
+
           icon.addEventListener('mouseenter', () => {
             animation.setDirection(direction)
             animation.play()
