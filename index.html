@@ -6,24 +6,10 @@
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicons/favicon-16x16.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
     <link rel="manifest" href="favicons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="favicons/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5" />
     <link rel="shortcut icon" href="favicons/favicon.ico" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-config" content="favicons/browserconfig.xml" />
@@ -54,10 +40,7 @@
     <meta name="og:type" content="website" />
 
     <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Inconsolata%7CNoto+Sans"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata%7CNoto+Sans" rel="stylesheet" />
 
     <!-- Custom Styles -->
     <style>
@@ -246,7 +229,8 @@
         margin-bottom: 2px;
       }
 
-      .social .anim-icon-mail, .anim-icon-scroll-down {
+      .social .anim-icon-mail,
+      .anim-icon-scroll-down {
         width: 32px;
       }
 
@@ -257,6 +241,14 @@
 
       .social svg:hover path {
         stroke: var(--orange);
+      }
+
+      .social .anim-icon-stackoverflow svg path {
+        fill: var(--light-grey);
+      }
+
+      .social .anim-icon-stackoverflow svg:hover path {
+        fill: var(--orange);
       }
 
       .icon-scroll-container {
@@ -319,17 +311,12 @@
       .anim-icon-scroll-down {
         margin: 0 auto;
       }
-
     </style>
   </head>
   <body>
     <main class="about">
       <div class="container">
-        <svg
-          viewbox="0 0 600 600"
-          xmlns="http://www.w3.org/2000/svg"
-          class="blob blob-1"
-        >
+        <svg viewbox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" class="blob blob-1">
           <g transform="translate(300,300)">
             <path
               d="M119.6,-162.4C159.2,-135.8,198.5,-106.5,200.7,-71.8C202.9,-37.1,168,3.1,143.8,37.1C119.5,71.2,105.9,99.1,83.7,138.7C61.5,178.3,30.8,229.7,-12,246.3C-54.9,262.8,-109.7,244.7,-141.9,208.3C-174.1,171.9,-183.6,117.3,-202.6,64.5C-221.6,11.6,-250.1,-39.5,-231.7,-68.8C-213.2,-98.1,-147.7,-105.7,-101.3,-130.1C-54.9,-154.5,-27.4,-195.8,6.3,-204.4C40,-213,79.9,-189,119.6,-162.4Z"
@@ -341,62 +328,27 @@
         <h1>Leonardo Galante</h1>
         <p>
           Front-end Tech Lead at
-          <a
-            href="https://www.xivis.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Xivis</a
-          >
+          <a href="https://www.xivis.com" target="_blank" rel="noopener noreferrer">Xivis</a>
           building an amazing team
         </p>
         <p>
           Developing
-          <a
-            href="https://www.typescriptlang.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >TypeScript</a
-          >
+          <a href="https://www.typescriptlang.org" target="_blank" rel="noopener noreferrer">TypeScript</a>
           solutions with
-          <a
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >React</a
-          >
+          <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">React</a>
           and
-          <a
-            href="https://graphql.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GraphQL</a
-          >
+          <a href="https://graphql.org" target="_blank" rel="noopener noreferrer">GraphQL</a>
         </p>
         <p>
           Empowering communities through
-          <a
-            href="https://auth0.com/ambassador-program"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Auth0 Ambassador</a
-          >
+          <a href="https://auth0.com/ambassador-program" target="_blank" rel="noopener noreferrer">Auth0 Ambassador</a>
           program
         </p>
         <p>
           Organizing
-          <a
-            href="https://freecodecampba.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >freeCodeCampBA</a
-          >
+          <a href="https://freecodecampba.org" target="_blank" rel="noopener noreferrer">freeCodeCampBA</a>
           meetups and
-          <a
-            href="https://javascript-101.github.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            >JavaScript101</a
-          >
+          <a href="https://javascript-101.github.io" target="_blank" rel="noopener noreferrer">JavaScript101</a>
           workshops
         </p>
 
@@ -408,6 +360,14 @@
             rel="noopener noreferrer"
             class="anim-icon-github"
             data-animation="github"
+          ></a>
+          <a
+            href="https://stackoverflow.com/users/6055365"
+            aria-label="Stackoverflow"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-stackoverflow"
+            data-animation="stackoverflow"
           ></a>
           <a
             href="https://twitter.com/lndgalante"
@@ -428,19 +388,13 @@
       </div>
 
       <div class="mouse_scroll">
-        <div
-        class="anim-icon-scroll-down"
-        data-animation="scroll-down" ></div>
+        <div class="anim-icon-scroll-down" data-animation="scroll-down"></div>
       </div>
     </main>
 
     <section class="projects">
       <div class="container">
-        <svg
-          viewbox="0 0 600 600"
-          xmlns="http://www.w3.org/2000/svg"
-          class="blob blob-2"
-        >
+        <svg viewbox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" class="blob blob-2">
           <g transform="translate(300,300)">
             <path
               d="M111.3,-179C146.9,-150.3,180.4,-124,198.9,-89.1C217.4,-54.3,221,-11,197.3,15.5C173.5,42.1,122.3,51.8,97.9,90.9C73.5,130,75.9,198.3,54.6,220.2C33.3,242.1,-11.6,217.5,-28.7,176.5C-45.8,135.6,-35,78.3,-72.9,52.9C-110.8,27.6,-197.4,34.2,-223.1,17.2C-248.8,0.1,-213.6,-40.7,-172.3,-57C-131.1,-73.3,-83.9,-65.3,-54.2,-96.7C-24.5,-128.1,-12.3,-199.1,12.8,-219C37.8,-238.9,75.7,-207.8,111.3,-179Z"
@@ -453,11 +407,7 @@
           <span>Projects</span>
         </h2>
         <article class="lax" data-lax-preset="blurInOut fadeInOut">
-          <a
-            href="https://estrenos.now.sh"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://estrenos.now.sh" target="_blank" rel="noopener noreferrer">
             <h3>Cinemark estrenos &middot; React & Express</h3>
             <p>Watch the latest Cinemark premieres</p>
           </a>
@@ -487,11 +437,7 @@
 
     <section class="writings">
       <div class="container">
-        <svg
-          viewbox="0 0 600 600"
-          xmlns="http://www.w3.org/2000/svg"
-          class="blob blob-3"
-        >
+        <svg viewbox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" class="blob blob-3">
           <g transform="translate(300,300)">
             <path
               d="M106.6,-188C124.4,-154.3,115.9,-101.7,121.6,-63.2C127.3,-24.7,147.3,-0.3,153.7,28.9C160.1,58.2,153,92.3,129.5,103.1C106,114,66.1,101.6,28.4,126.1C-9.3,150.6,-44.8,212,-66.7,212.3C-88.5,212.6,-96.8,151.8,-110.5,110.1C-124.1,68.5,-143.2,45.9,-163.6,13.4C-184,-19.1,-205.7,-61.5,-197.9,-95.4C-190.2,-129.2,-152.9,-154.6,-115,-179.2C-77.1,-203.7,-38.6,-227.3,2.9,-231.8C44.3,-236.3,88.7,-221.6,106.6,-188Z"
@@ -538,11 +484,7 @@
 
     <section class="goodies">
       <div class="container">
-        <svg
-          viewbox="0 0 600 600"
-          xmlns="http://www.w3.org/2000/svg"
-          class="blob blob-4"
-        >
+        <svg viewbox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" class="blob blob-4">
           <g transform="translate(300,300)">
             <path
               d="M99.6,-164.2C123.6,-139.7,133.7,-102.6,133.7,-70.5C133.8,-38.3,123.8,-11,111.7,10.2C99.6,31.4,85.3,46.5,72.8,65.7C60.2,84.9,49.4,108.2,23.6,145.4C-2.2,182.6,-42.9,233.8,-68.9,228.8C-94.8,223.8,-106,162.7,-131.1,120.8C-156.3,78.9,-195.4,56.3,-219,19.7C-242.5,-16.8,-250.4,-67.4,-216.9,-81.7C-183.4,-96,-108.5,-74.1,-65.4,-89.9C-22.3,-105.8,-11.2,-159.4,13.3,-180.1C37.8,-200.9,75.7,-188.8,99.6,-164.2Z"
@@ -555,31 +497,19 @@
           <span>Goodies</span>
         </h2>
         <article class="lax" data-lax-preset="blurInOut fadeInOut">
-          <a
-            href="https://github.com/lndgalante/codewars-katas"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/lndgalante/codewars-katas" target="_blank" rel="noopener noreferrer">
             <h3>Codewars Katas</h3>
             <p>Algorithmic solutions with tests integration</p>
           </a>
         </article>
         <article class="lax" data-lax-preset="blurInOut fadeInOut">
-          <a
-            href="https://github.com/lndgalante/courses-list"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/lndgalante/courses-list" target="_blank" rel="noopener noreferrer">
             <h3>Courses List</h3>
             <p>Tons of free and paid web development courses</p>
           </a>
         </article>
         <article class="lax" data-lax-preset="blurInOut fadeInOut">
-          <a
-            href="https://github.com/lndgalante/reads"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/lndgalante/reads" target="_blank" rel="noopener noreferrer">
             <h3>Reads</h3>
             <p>Recommended books, style guides and conferences</p>
           </a>
@@ -623,29 +553,30 @@
     <script>
       function main() {
         /* Lax */
-        lax.setup()
+        lax.setup();
 
         const updateLax = () => {
-          lax.update(window.scrollY)
-          window.requestAnimationFrame(updateLax)
-        }
+          lax.update(window.scrollY);
+          window.requestAnimationFrame(updateLax);
+        };
 
-        window.requestAnimationFrame(updateLax)
+        window.requestAnimationFrame(updateLax);
 
         /* useAnimations */
-        const iconGithub = document.querySelector('.anim-icon-github')
+        const iconGithub = document.querySelector('.anim-icon-github');
 
-        const iconPrefix = 'anim-icon'
+        const iconPrefix = 'anim-icon';
         const icons = [
           ...document.querySelectorAll(`.${iconPrefix}-github`),
           ...document.querySelectorAll(`.${iconPrefix}-twitter`),
           ...document.querySelectorAll(`.${iconPrefix}-mail`),
           ...document.querySelectorAll(`.${iconPrefix}-scroll-down`),
-        ]
+          ...document.querySelectorAll(`.${iconPrefix}-stackoverflow`),
+        ];
 
-        icons.forEach(icon => {
-          const direction = 1
-          const animationName = icon.getAttribute('data-animation')
+        icons.forEach((icon) => {
+          const animationName = icon.getAttribute('data-animation');
+          const direction = 1;
 
           const animation = lottie.loadAnimation({
             renderer: 'svg',
@@ -653,29 +584,34 @@
             autoplay: false,
             loop: animationName !== 'mail',
             path: `animations/${animationName}.json`,
-          })
+          });
 
-          animation.setSpeed(1)
+          animation.setSpeed(1);
+
+          if (animationName === 'stackoverflow') {
+            animation.goToAndStop(100, true);
+          }
 
           if (animationName === 'scroll-down') {
-            animation.play()
+            animation.play();
           }
 
           icon.addEventListener('mouseenter', () => {
-            animation.setDirection(direction)
-            animation.play()
-          })
+            animation.setDirection(direction);
+            animation.play();
+          });
 
           icon.addEventListener('mouseleave', () => {
-            if (animationName !== 'mail') return animation.stop()
+            if (animationName === 'stackoverflow') return animation.goToAndStop(100, true);
+            if (animationName !== 'mail') return animation.stop();
 
-            animation.setDirection(-direction)
-            animation.play()
-          })
-        })
+            animation.setDirection(-direction);
+            animation.play();
+          });
+        });
       }
 
-      document.addEventListener('DOMContentLoaded', main)
+      document.addEventListener('DOMContentLoaded', main);
     </script>
   </body>
 </html>
