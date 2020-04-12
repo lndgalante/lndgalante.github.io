@@ -239,7 +239,7 @@
         stroke: var(--light-grey);
       }
 
-      .social svg:hover path {
+      [data-animation]:hover path {
         stroke: var(--orange);
       }
 
@@ -247,7 +247,7 @@
         fill: var(--light-grey);
       }
 
-      .social .anim-icon-stackoverflow svg:hover path {
+      .social .anim-icon-stackoverflow:hover path {
         fill: var(--orange);
       }
 
@@ -278,8 +278,17 @@
         max-width: 120px;
       }
 
-      footer .social svg {
-        width: 18px;
+      footer .social .anim-icon-github {
+        width: 20px;
+      }
+
+      footer .social .anim-icon-twitter {
+        width: 26px;
+        margin-bottom: 0px;
+      }
+
+      footer .social .anim-icon-mail {
+        width: 24px;
       }
 
       .about *::selection {
@@ -519,7 +528,7 @@
 
     <footer>
       <div class="container">
-        <p>Leonardo Galante &copy; 2019</p>
+        <p>Leonardo Galante &copy; 2020</p>
         <div class="social">
           <a
             href="https://github.com/lndgalante"
