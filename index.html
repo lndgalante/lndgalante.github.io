@@ -308,13 +308,21 @@
       }
 
       .mouse_scroll {
-        display: block;
+        display: none;
         width: 24px;
-        height: 100px;
         opacity: 0.9;
         width: 100%;
         position: absolute;
-        bottom: -40px;
+        bottom: 0;
+        padding: 20px;
+
+
+      }
+
+      @media (min-width: 1024px) {
+        .mouse_scroll {
+          display: block;
+        }
       }
 
       .anim-icon-scroll-down {
