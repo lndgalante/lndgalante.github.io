@@ -224,6 +224,11 @@
         margin-left: 18px;
       }
 
+      .social .anim-icon-youtube {
+        width: 32px;
+        margin-top: 2px;
+      }
+
       .social .anim-icon-twitter {
         width: 32px;
         margin-bottom: 2px;
@@ -264,22 +269,28 @@
         color: var(--light-grey);
         height: 60px;
         padding: 10px 0;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
       }
 
       footer p {
         font-size: 0.6em;
+        margin-bottom: 0;
       }
 
       footer .social {
         padding: 0;
-        max-width: 120px;
+        max-width: 160px;
       }
 
       footer .social .anim-icon-github {
         width: 20px;
+      }
+
+      footer .social .anim-icon-youtube {
+        width: 26px;
+        margin-top: 2px;
       }
 
       footer .social .anim-icon-twitter {
@@ -315,18 +326,20 @@
         position: absolute;
         bottom: 0;
         padding: 20px;
+      }
 
-
+      .anim-icon-scroll-down {
+        margin: 0 auto;
       }
 
       @media (min-width: 1024px) {
         .mouse_scroll {
           display: block;
         }
-      }
 
-      .anim-icon-scroll-down {
-        margin: 0 auto;
+        footer div.container {
+          flex-direction: row;
+        }
       }
     </style>
   </head>
@@ -357,11 +370,6 @@
           <a href="https://graphql.org" target="_blank" rel="noopener noreferrer">GraphQL</a>
         </p>
         <p>
-          Empowering communities through
-          <a href="https://auth0.com/ambassador-program" target="_blank" rel="noopener noreferrer">Auth0 Ambassador</a>
-          program
-        </p>
-        <p>
           Organizing
           <a href="https://freecodecampba.org" target="_blank" rel="noopener noreferrer">freeCodeCampBA</a>
           meetups and
@@ -379,20 +387,28 @@
             data-animation="github"
           ></a>
           <a
-            href="https://stackoverflow.com/users/6055365"
-            aria-label="Stackoverflow"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="anim-icon-stackoverflow"
-            data-animation="stackoverflow"
-          ></a>
-          <a
             href="https://twitter.com/lndgalante"
             aria-label="Twitter"
             target="_blank"
             rel="noopener noreferrer"
             class="anim-icon-twitter"
             data-animation="twitter"
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UC-gFUpD0aKzMS5_uwbHSOrA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-youtube"
+            data-animation="youtube"
+          ></a>
+          <a
+            href="https://stackoverflow.com/users/6055365"
+            aria-label="Stackoverflow"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-stackoverflow"
+            data-animation="stackoverflow"
           ></a>
           <a
             href="mailto:lndgalante@gmail.com"
@@ -547,20 +563,28 @@
             data-animation="github"
           ></a>
           <a
-            href="https://stackoverflow.com/users/6055365"
-            aria-label="Stackoverflow"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="anim-icon-stackoverflow"
-            data-animation="stackoverflow"
-          ></a>
-          <a
             href="https://twitter.com/lndgalante"
             aria-label="Twitter"
             target="_blank"
             rel="noopener noreferrer"
             class="anim-icon-twitter"
             data-animation="twitter"
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UC-gFUpD0aKzMS5_uwbHSOrA"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-youtube"
+            data-animation="youtube"
+          ></a>
+          <a
+            href="https://stackoverflow.com/users/6055365"
+            aria-label="Stackoverflow"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="anim-icon-stackoverflow"
+            data-animation="stackoverflow"
           ></a>
           <a
             href="mailto:lndgalante@gmail.com"
@@ -593,6 +617,7 @@
         const iconPrefix = 'anim-icon';
         const icons = [
           ...document.querySelectorAll(`.${iconPrefix}-github`),
+          ...document.querySelectorAll(`.${iconPrefix}-youtube`),
           ...document.querySelectorAll(`.${iconPrefix}-twitter`),
           ...document.querySelectorAll(`.${iconPrefix}-mail`),
           ...document.querySelectorAll(`.${iconPrefix}-scroll-down`),
