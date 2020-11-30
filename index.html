@@ -457,7 +457,7 @@
         </article>
         <article class="lax" data-lax-preset="blurInOut fadeInOut">
           <a
-            href="https://chrome.google.com/webstore/detail/mercadolibre-m%C3%A1s-vendidos/ecmfdhafogloeacbceakgefanbkocdhk"
+            href="https://chrome.google.com/webstore/detail/mercadolibre-m%C3%A1s-vendidos/bmjpjimlmmbjpmglplkahkhpebomdoed"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -602,19 +602,19 @@
     <script>
       function main() {
         /* Lax */
-        lax.setup();
+        lax.setup()
 
         const updateLax = () => {
-          lax.update(window.scrollY);
-          window.requestAnimationFrame(updateLax);
-        };
+          lax.update(window.scrollY)
+          window.requestAnimationFrame(updateLax)
+        }
 
-        window.requestAnimationFrame(updateLax);
+        window.requestAnimationFrame(updateLax)
 
         /* useAnimations */
-        const iconGithub = document.querySelector('.anim-icon-github');
+        const iconGithub = document.querySelector('.anim-icon-github')
 
-        const iconPrefix = 'anim-icon';
+        const iconPrefix = 'anim-icon'
         const icons = [
           ...document.querySelectorAll(`.${iconPrefix}-github`),
           ...document.querySelectorAll(`.${iconPrefix}-youtube`),
@@ -622,11 +622,11 @@
           ...document.querySelectorAll(`.${iconPrefix}-mail`),
           ...document.querySelectorAll(`.${iconPrefix}-scroll-down`),
           ...document.querySelectorAll(`.${iconPrefix}-stackoverflow`),
-        ];
+        ]
 
         icons.forEach((icon) => {
-          const animationName = icon.getAttribute('data-animation');
-          const direction = 1;
+          const animationName = icon.getAttribute('data-animation')
+          const direction = 1
 
           const animation = lottie.loadAnimation({
             renderer: 'svg',
@@ -634,34 +634,34 @@
             autoplay: false,
             loop: animationName !== 'mail',
             path: `animations/${animationName}.json`,
-          });
+          })
 
-          animation.setSpeed(1);
+          animation.setSpeed(1)
 
           if (animationName === 'stackoverflow') {
-            animation.goToAndStop(100, true);
+            animation.goToAndStop(100, true)
           }
 
           if (animationName === 'scroll-down') {
-            animation.play();
+            animation.play()
           }
 
           icon.addEventListener('mouseenter', () => {
-            animation.setDirection(direction);
-            animation.play();
-          });
+            animation.setDirection(direction)
+            animation.play()
+          })
 
           icon.addEventListener('mouseleave', () => {
-            if (animationName === 'stackoverflow') return animation.goToAndStop(100, true);
-            if (animationName !== 'mail') return animation.stop();
+            if (animationName === 'stackoverflow') return animation.goToAndStop(100, true)
+            if (animationName !== 'mail') return animation.stop()
 
-            animation.setDirection(-direction);
-            animation.play();
-          });
-        });
+            animation.setDirection(-direction)
+            animation.play()
+          })
+        })
       }
 
-      document.addEventListener('DOMContentLoaded', main);
+      document.addEventListener('DOMContentLoaded', main)
     </script>
   </body>
 </html>
