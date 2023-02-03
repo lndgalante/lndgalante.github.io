@@ -9,7 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "build:gh": "astro build && cp -r ./dist/* ../"
+    "build:gh": "astro build && rm -rf ../_astro ../images ../index.html ../favicon.svg && cp -r ./dist/* ../"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
