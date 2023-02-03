@@ -1,81 +1,131 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title='Leonardo Galante'>
+  <main class='py-32 max-w-2xl mx-auto flex flex-col gap-32 text-neutral-200 px-4'>
+    <section class='flex flex-col md:flex-row items-center text-center md:text-left gap-6'>
+      <div class='rounded-full w-36 h-36 p-4 relative group transform overflow-hidden'>
+        <img
+          src='/images/logo.png'
+          alt='Leonardo Galante'
+          class='w-full h-full object-contain group-hover:opacity-0 opacity-100 transition'
+        />
+        <img
+          src='/images/photo.png'
+          alt='Leonardo Galante'
+          class='w-[398px] h-[265px] absolute top-0 left-[-8px] right-0 object-cover group-hover:opacity-100 opacity-0 transition'
+        />
+      </div>
+      <article class='flex flex-col flex-1 gap-4 max-w-xs md:max-w-none'>
+        <h1 class='text-4xl font-["EB_Garamond"] text-white'>Leonardo Galante</h1>
+        <p>
+          Hola, soy Leo, Ingeniero Frontend en Phantom donde ayudo a crear una wallet más accesible y rápida para todo
+          el mundo.
+        </p>
+      </article>
+    </section>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+    <section class='flex flex-col gap-6'>
+      <h2 class='text-4xl font-["EB_Garamond"] text-white'>Proyectos</h2>
+      <article class='flex'>
+        <a
+          href='https://www.whichiconisthat.com'
+          target='=_blank'
+          rel='noopener noreferrer'
+          class='rounded-sm h-72 relative w-full overflow-hidden object-contain grayscale hover:grayscale-0 transition cursor-pointer group'
+        >
+          <img src='/images/wiit.png' class='absolute inset-0' />
+          <div
+            class='absolute bottom-11 right-2 md:bottom-2 md:right-2 flex gap-2 text-xs opacity-0 group-hover:opacity-100 transition'
+          >
+            <div class='p-2 rounded-sm bg-zinc-900'>
+              <p>Deno</p>
+            </div>
+            <div class='p-2 rounded-sm bg-zinc-900'>
+              <p>PostgreSQL</p>
+            </div>
+            <div class='p-2 rounded-sm bg-zinc-900'>
+              <p>Next.js</p>
+            </div>
+            <div class='p-2 rounded-sm bg-zinc-900'>
+              <p>Chakra UI</p>
+            </div>
+          </div>
+        </a>
+      </article>
+    </section>
+
+    <section class='flex flex-col gap-6'>
+      <h2 class='text-4xl font-["EB_Garamond"] text-white'>Tech Stack</h2>
+      <article class='flex text-neutral-800 gap-2 uppercase text-xs flex-wrap'>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>Typescript</p>
+        </div>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>Next.js</p>
+        </div>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>Tailwind</p>
+        </div>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>Framer Motion</p>
+        </div>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>Zod</p>
+        </div>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>react-ts-form</p>
+        </div>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>TS-belt</p>
+        </div>
+      </article>
+    </section>
+
+    <section class='flex flex-col gap-6'>
+      <h2 class='text-4xl font-["EB_Garamond"] text-white'>Uses</h2>
+      <article class='flex text-neutral-800 gap-2 uppercase text-xs flex-wrap'>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>Macbook Pro 14"</p>
+        </div>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>Keychron Q1</p>
+        </div>
+        <div class='p-2 rounded-sm bg-zinc-200'>
+          <p>Magic Trackpad</p>
+        </div>
+      </article>
+    </section>
+
+    <footer class='text-neutral-200 flex justify-between items-center text-sm'>
+      <p>Copyright &copy; {new Date().getFullYear()}</p>
+      <div class='flex gap-2'>
+        <a
+          href='https://twitter.com/lndgalante'
+          target='=_blank'
+          rel='noopener noreferrer'
+          class='hover:text-blue-300 transition'>twitter</a
+        >
+        <a
+          href='https://github.com/lndgalante'
+          target='=_blank'
+          rel='noopener noreferrer'
+          class='hover:text-blue-300 transition'>github</a
+        >
+        <a
+          href='https://youtube.com/c/leonardogalante'
+          target='=_blank'
+          rel='noopener noreferrer'
+          class='hover:text-blue-300 transition'>youtube</a
+        >
+        <a
+          href='https://www.twitch.tv/lndgalante'
+          target='=_blank'
+          rel='noopener noreferrer'
+          class='hover:text-blue-300 transition'>twitch</a
+        >
+      </div>
+    </footer>
+  </main>
+</Layout>

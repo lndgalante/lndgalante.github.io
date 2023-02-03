@@ -12,6 +12,9 @@
     "build:gh": "astro build && cp -r ./dist/* ../"
   },
   "dependencies": {
-    "astro": "^2.0.6"
+    "@astrojs/tailwind": "^3.0.1",
+    "@fontsource/eb-garamond": "^4.5.11",
+    "astro": "^2.0.6",
+    "tailwindcss": "^3.2.4"
   }
 }
